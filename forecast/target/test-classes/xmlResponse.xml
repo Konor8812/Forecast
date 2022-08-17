@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weatherdata>
+    <location>
+        <name>Irpin</name>
+        <type></type>
+        <country>UA</country>
+        <timezone>10800</timezone>
+        <location altitude="0" latitude="50.523" longitude="30.24" geobase="geonames" geobaseid="707565"></location>
+    </location>
+    <credit></credit>
+    <meta>
+        <lastupdate></lastupdate>
+        <calctime>0</calctime>
+        <nextupdate></nextupdate>
+    </meta>
+    <sun rise="2022-08-16T02:48:33" set="2022-08-16T17:18:28"></sun>
+    <forecast>
+        <time from="2022-08-16T15:00:00" to="2022-08-16T18:00:00">
+            <symbol number="500" name="light rain" var="10n"></symbol>
+            <precipitation probability="0.5" unit="3h" value="0.65" type="rain"></precipitation>
+            <windDirection deg="54" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="2.36" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="5.08" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="293.13" min="291.68" max="293.13"></temperature>
+            <feels_like value="293.53" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="90" unit="%"></humidity>
+            <clouds value="overcast clouds" all="100" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-16T18:00:00" to="2022-08-16T21:00:00">
+            <symbol number="804" name="overcast clouds" var="04n"></symbol>
+            <precipitation probability="0.16"></precipitation>
+            <windDirection deg="92" code="E" name="East"></windDirection>
+            <windSpeed mps="2.06" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.47" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="292.42" min="291.01" max="292.42"></temperature>
+            <feels_like value="292.78" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="91" unit="%"></humidity>
+            <clouds value="overcast clouds" all="98" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-16T21:00:00" to="2022-08-17T00:00:00">
+            <symbol number="803" name="broken clouds" var="04n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="85" code="E" name="East"></windDirection>
+            <windSpeed mps="1.01" unit="m/s" name="Calm"></windSpeed>
+            <windGust gust="1.11" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="291.29" min="290.37" max="291.29"></temperature>
+            <feels_like value="291.51" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="90" unit="%"></humidity>
+            <clouds value="broken clouds" all="76" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T00:00:00" to="2022-08-17T03:00:00">
+            <symbol number="802" name="scattered clouds" var="03d"></symbol>
+            <precipitation probability="0.08"></precipitation>
+            <windDirection deg="9" code="N" name="North"></windDirection>
+            <windSpeed mps="1.4" unit="m/s" name="Calm"></windSpeed>
+            <windGust gust="1.43" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="289.93" min="289.93" max="289.93"></temperature>
+            <feels_like value="289.96" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1009"></pressure>
+            <humidity value="88" unit="%"></humidity>
+            <clouds value="scattered clouds" all="31" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T03:00:00" to="2022-08-17T06:00:00">
+            <symbol number="803" name="broken clouds" var="04d"></symbol>
+            <precipitation probability="0.11"></precipitation>
+            <windDirection deg="19" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="1.46" unit="m/s" name="Calm"></windSpeed>
+            <windGust gust="1.95" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="294.39" min="294.39" max="294.39"></temperature>
+            <feels_like value="294.32" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1009"></pressure>
+            <humidity value="67" unit="%"></humidity>
+            <clouds value="broken clouds" all="56" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T06:00:00" to="2022-08-17T09:00:00">
+            <symbol number="804" name="overcast clouds" var="04d"></symbol>
+            <precipitation probability="0.11"></precipitation>
+            <windDirection deg="104" code="ESE" name="East-southeast"></windDirection>
+            <windSpeed mps="1.19" unit="m/s" name="Calm"></windSpeed>
+            <windGust gust="1.35" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="300.08" min="300.08" max="300.08"></temperature>
+            <feels_like value="300.06" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1009"></pressure>
+            <humidity value="42" unit="%"></humidity>
+            <clouds value="overcast clouds" all="92" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T09:00:00" to="2022-08-17T12:00:00">
+            <symbol number="803" name="broken clouds" var="04d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="141" code="SE" name="SouthEast"></windDirection>
+            <windSpeed mps="1.19" unit="m/s" name="Calm"></windSpeed>
+            <windGust gust="1.39" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="302.84" min="302.84" max="302.84"></temperature>
+            <feels_like value="302.38" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1009"></pressure>
+            <humidity value="39" unit="%"></humidity>
+            <clouds value="broken clouds" all="63" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T12:00:00" to="2022-08-17T15:00:00">
+            <symbol number="803" name="broken clouds" var="04d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="67" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="1.64" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="1.57" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="302.4" min="302.4" max="302.4"></temperature>
+            <feels_like value="302.21" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1009"></pressure>
+            <humidity value="42" unit="%"></humidity>
+            <clouds value="broken clouds" all="58" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T15:00:00" to="2022-08-17T18:00:00">
+            <symbol number="500" name="light rain" var="10n"></symbol>
+            <precipitation probability="0.39" unit="3h" value="0.63" type="rain"></precipitation>
+            <windDirection deg="44" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="1.86" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="1.91" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="296.2" min="296.2" max="296.2"></temperature>
+            <feels_like value="296.05" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1009"></pressure>
+            <humidity value="57" unit="%"></humidity>
+            <clouds value="broken clouds" all="61" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T18:00:00" to="2022-08-17T21:00:00">
+            <symbol number="500" name="light rain" var="10n"></symbol>
+            <precipitation probability="0.52" unit="3h" value="0.19" type="rain"></precipitation>
+            <windDirection deg="299" code="WNW" name="West-northwest"></windDirection>
+            <windSpeed mps="1.07" unit="m/s" name="Calm"></windSpeed>
+            <windGust gust="1.26" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="293.56" min="293.56" max="293.56"></temperature>
+            <feels_like value="293.59" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="74" unit="%"></humidity>
+            <clouds value="scattered clouds" all="28" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-17T21:00:00" to="2022-08-18T00:00:00">
+            <symbol number="802" name="scattered clouds" var="03n"></symbol>
+            <precipitation probability="0.4"></precipitation>
+            <windDirection deg="17" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="2.57" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.89" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="291.93" min="291.93" max="291.93"></temperature>
+            <feels_like value="291.9" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="78" unit="%"></humidity>
+            <clouds value="scattered clouds" all="33" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T00:00:00" to="2022-08-18T03:00:00">
+            <symbol number="801" name="few clouds" var="02d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="34" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="2.46" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="4.26" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="291.17" min="291.17" max="291.17"></temperature>
+            <feels_like value="291.25" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="85" unit="%"></humidity>
+            <clouds value="few clouds" all="15" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T03:00:00" to="2022-08-18T06:00:00">
+            <symbol number="801" name="few clouds" var="02d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="42" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="3.54" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="5.81" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="295.75" min="295.75" max="295.75"></temperature>
+            <feels_like value="295.53" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="56" unit="%"></humidity>
+            <clouds value="few clouds" all="12" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T06:00:00" to="2022-08-18T09:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="31" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="4.41" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="5.65" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="300.28" min="300.28" max="300.28"></temperature>
+            <feels_like value="300.16" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="41" unit="%"></humidity>
+            <clouds value="clear sky" all="6" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T09:00:00" to="2022-08-18T12:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="23" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="4.57" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="5.55" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="303" min="303" max="303"></temperature>
+            <feels_like value="302.08" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="34" unit="%"></humidity>
+            <clouds value="clear sky" all="4" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T12:00:00" to="2022-08-18T15:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="16" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="4.53" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="5.73" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="301.76" min="301.76" max="301.76"></temperature>
+            <feels_like value="301.29" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="39" unit="%"></humidity>
+            <clouds value="clear sky" all="1" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T15:00:00" to="2022-08-18T18:00:00">
+            <symbol number="800" name="clear sky" var="01n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="4" code="N" name="North"></windDirection>
+            <windSpeed mps="3.27" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="7.29" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="296.13" min="296.13" max="296.13"></temperature>
+            <feels_like value="295.97" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="57" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T18:00:00" to="2022-08-18T21:00:00">
+            <symbol number="800" name="clear sky" var="01n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="32" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="2.95" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="7.12" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="294.19" min="294.19" max="294.19"></temperature>
+            <feels_like value="294.13" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="68" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-18T21:00:00" to="2022-08-19T00:00:00">
+            <symbol number="800" name="clear sky" var="01n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="21" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="3.2" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="7.01" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="292.4" min="292.4" max="292.4"></temperature>
+            <feels_like value="292.42" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="78" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T00:00:00" to="2022-08-19T03:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="21" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="3.04" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="6.72" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="291.23" min="291.23" max="291.23"></temperature>
+            <feels_like value="291.13" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="78" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T03:00:00" to="2022-08-19T06:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="38" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="4.32" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="6.38" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="295.19" min="295.19" max="295.19"></temperature>
+            <feels_like value="295.04" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="61" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T06:00:00" to="2022-08-19T09:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="30" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="4.3" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="5.09" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="299.6" min="299.6" max="299.6"></temperature>
+            <feels_like value="299.6" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="49" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T09:00:00" to="2022-08-19T12:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="24" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="3.69" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="4.15" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="302.1" min="302.1" max="302.1"></temperature>
+            <feels_like value="301.89" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="42" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T12:00:00" to="2022-08-19T15:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="9" code="N" name="North"></windDirection>
+            <windSpeed mps="3.41" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="4.02" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="301.91" min="301.91" max="301.91"></temperature>
+            <feels_like value="302.07" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="46" unit="%"></humidity>
+            <clouds value="clear sky" all="3" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T15:00:00" to="2022-08-19T18:00:00">
+            <symbol number="500" name="light rain" var="10n"></symbol>
+            <precipitation probability="0.2" unit="3h" value="0.23" type="rain"></precipitation>
+            <windDirection deg="43" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="4.06" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="9.7" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="296.59" min="296.59" max="296.59"></temperature>
+            <feels_like value="296.77" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1013"></pressure>
+            <humidity value="68" unit="%"></humidity>
+            <clouds value="few clouds" all="11" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T18:00:00" to="2022-08-19T21:00:00">
+            <symbol number="500" name="light rain" var="10n"></symbol>
+            <precipitation probability="0.32" unit="3h" value="0.25" type="rain"></precipitation>
+            <windDirection deg="78" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="3.57" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="7.85" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="294.75" min="294.75" max="294.75"></temperature>
+            <feels_like value="294.92" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1013"></pressure>
+            <humidity value="75" unit="%"></humidity>
+            <clouds value="few clouds" all="16" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-19T21:00:00" to="2022-08-20T00:00:00">
+            <symbol number="800" name="clear sky" var="01n"></symbol>
+            <precipitation probability="0.04"></precipitation>
+            <windDirection deg="58" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="1.97" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="2.45" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="292.96" min="292.96" max="292.96"></temperature>
+            <feels_like value="293.27" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1013"></pressure>
+            <humidity value="87" unit="%"></humidity>
+            <clouds value="few clouds" all="10" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T00:00:00" to="2022-08-20T03:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="51" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="2.48" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="4.44" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="291.72" min="291.72" max="291.72"></temperature>
+            <feels_like value="292.06" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1014"></pressure>
+            <humidity value="93" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T03:00:00" to="2022-08-20T06:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="76" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="2.69" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.82" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="295.93" min="295.93" max="295.93"></temperature>
+            <feels_like value="296.14" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1015"></pressure>
+            <humidity value="72" unit="%"></humidity>
+            <clouds value="clear sky" all="1" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T06:00:00" to="2022-08-20T09:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="71" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="2.93" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.59" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="301.04" min="301.04" max="301.04"></temperature>
+            <feels_like value="301.48" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1014"></pressure>
+            <humidity value="50" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T09:00:00" to="2022-08-20T12:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="56" code="NE" name="NorthEast"></windDirection>
+            <windSpeed mps="2.16" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.05" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="304.01" min="304.01" max="304.01"></temperature>
+            <feels_like value="303.75" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1013"></pressure>
+            <humidity value="39" unit="%"></humidity>
+            <clouds value="clear sky" all="0" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T12:00:00" to="2022-08-20T15:00:00">
+            <symbol number="803" name="broken clouds" var="04d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="21" code="NNE" name="North-northeast"></windDirection>
+            <windSpeed mps="2.7" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.19" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="302.31" min="302.31" max="302.31"></temperature>
+            <feels_like value="302.32" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="44" unit="%"></humidity>
+            <clouds value="broken clouds" all="60" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T15:00:00" to="2022-08-20T18:00:00">
+            <symbol number="803" name="broken clouds" var="04n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="65" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="3.91" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="8.28" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="298.76" min="298.76" max="298.76"></temperature>
+            <feels_like value="298.68" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="50" unit="%"></humidity>
+            <clouds value="broken clouds" all="65" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T18:00:00" to="2022-08-20T21:00:00">
+            <symbol number="800" name="clear sky" var="01n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="107" code="ESE" name="East-southeast"></windDirection>
+            <windSpeed mps="2.81" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="5.05" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="296.03" min="296.03" max="296.03"></temperature>
+            <feels_like value="295.57" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="46" unit="%"></humidity>
+            <clouds value="clear sky" all="2" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-20T21:00:00" to="2022-08-21T00:00:00">
+            <symbol number="800" name="clear sky" var="01n"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="77" code="ENE" name="East-northeast"></windDirection>
+            <windSpeed mps="2.81" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="5.01" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="294.11" min="294.11" max="294.11"></temperature>
+            <feels_like value="293.72" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="56" unit="%"></humidity>
+            <clouds value="clear sky" all="1" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-21T00:00:00" to="2022-08-21T03:00:00">
+            <symbol number="800" name="clear sky" var="01d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="108" code="ESE" name="East-southeast"></windDirection>
+            <windSpeed mps="2.12" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.15" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="292.59" min="292.59" max="292.59"></temperature>
+            <feels_like value="292.78" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1012"></pressure>
+            <humidity value="84" unit="%"></humidity>
+            <clouds value="clear sky" all="5" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-21T03:00:00" to="2022-08-21T06:00:00">
+            <symbol number="801" name="few clouds" var="02d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="129" code="SE" name="SouthEast"></windDirection>
+            <windSpeed mps="2.17" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="2.75" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="297.05" min="297.05" max="297.05"></temperature>
+            <feels_like value="297.25" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="67" unit="%"></humidity>
+            <clouds value="few clouds" all="13" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-21T06:00:00" to="2022-08-21T09:00:00">
+            <symbol number="804" name="overcast clouds" var="04d"></symbol>
+            <precipitation probability="0"></precipitation>
+            <windDirection deg="126" code="SE" name="SouthEast"></windDirection>
+            <windSpeed mps="2.88" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.04" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="300.56" min="300.56" max="300.56"></temperature>
+            <feels_like value="301.12" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1011"></pressure>
+            <humidity value="52" unit="%"></humidity>
+            <clouds value="overcast clouds" all="88" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-21T09:00:00" to="2022-08-21T12:00:00">
+            <symbol number="804" name="overcast clouds" var="04d"></symbol>
+            <precipitation probability="0.04"></precipitation>
+            <windDirection deg="127" code="SE" name="SouthEast"></windDirection>
+            <windSpeed mps="1.9" unit="m/s" name="Light breeze"></windSpeed>
+            <windGust gust="3.48" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="303.6" min="303.6" max="303.6"></temperature>
+            <feels_like value="303.64" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="42" unit="%"></humidity>
+            <clouds value="overcast clouds" all="91" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+        <time from="2022-08-21T12:00:00" to="2022-08-21T15:00:00">
+            <symbol number="500" name="light rain" var="10d"></symbol>
+            <precipitation probability="0.71" unit="3h" value="2.17" type="rain"></precipitation>
+            <windDirection deg="217" code="SW" name="Southwest"></windDirection>
+            <windSpeed mps="5" unit="m/s" name="Gentle Breeze"></windSpeed>
+            <windGust gust="7.66" unit="m/s"></windGust>
+            <temperature unit="kelvin" value="295.82" min="295.82" max="295.82"></temperature>
+            <feels_like value="296.26" unit="kelvin"></feels_like>
+            <pressure unit="hPa" value="1010"></pressure>
+            <humidity value="81" unit="%"></humidity>
+            <clouds value="broken clouds" all="77" unit="%"></clouds>
+            <visibility value="10000"></visibility>
+        </time>
+    </forecast>
+</weatherdata>

@@ -1,0 +1,14 @@
+com\illia\forecast\core\model\WeatherForecast.class
+com\illia\forecast\core\model\Location.class
+com\illia\ForecastClient.class
+com\illia\forecast\core\requester\RequesterException.class
+com\illia\forecast\core\parser\Parser.class
+com\illia\forecast\core\requester\WeatherForecastRequester.class
+com\illia\forecast\core\requester\XMLForecastRequester.class
+com\illia\forecast\core\config\WeatherForecastConfig.class
+com\illia\forecast\core\model\Weather.class
+com\illia\forecast\core\service\WeatherService.class
+com\illia\forecast\core\parser\WeatherXMLParser.class
+com\illia\forecast\core\controller\MainController.class
+com\illia\forecast\core\config\AppConfiguration.class
+com\illia\forecast\core\model\Test.class
