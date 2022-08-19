@@ -1,15 +1,10 @@
 package com.illia.forecast.core.model;
 
-
-import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @Data
 public class WeatherForecast {
@@ -62,4 +57,3 @@ public class WeatherForecast {
         return sb.toString();
     }
 }
-// String time 2022-08-16T15:00:00

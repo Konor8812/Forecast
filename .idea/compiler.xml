@@ -11,8 +11,5 @@
         <module name="forecast" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Forecast" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

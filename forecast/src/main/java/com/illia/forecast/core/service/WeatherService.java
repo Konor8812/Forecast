@@ -20,12 +20,11 @@ public class WeatherService {
     @Autowired
     private Parser parser;
 
-    public String getParsedWeather(double latitude, double longitude){
+    public WeatherForecast getWeather(double latitude, double longitude){
 
         String urlWithParams = String.format("%s?lat=%f&lon=%f&appid=%s&mode=%s", weatherForecastConfig.getBaseUrl(), latitude, longitude, weatherForecastConfig.getAppid(), weatherForecastConfig.getMode());
-        WeatherForecast weatherForecast = parser.parse(forecastRequester.requestForecastAsXML(urlWithParams));
 
-        return null;
+        return parser.parse(forecastRequester.requestForecastAsXML(urlWithParams));
     }
 
 

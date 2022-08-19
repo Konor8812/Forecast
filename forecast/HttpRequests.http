@@ -1,0 +1,6 @@
+http://localhost:8081/home/forecast/50.523/30.24
+
+
+http://localhost:8081/home/forecast/lat=50.523000/lon=30.240000
+http://localhost:8081/home/forecast?lat=50.523000&lon=30.240000
+http://localhost:8081/home/forecast/50.523/30.24
