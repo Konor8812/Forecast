@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+
+  core:
+    build:
+      context: ../forecast
+      dockerfile: Dockerfile
+
+  client:
+    build:
+      context: ../forecastClient
+      dockerfile: Dockerfile
+
+    depends_on:
+      - core

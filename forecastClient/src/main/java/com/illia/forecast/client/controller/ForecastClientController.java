@@ -20,11 +20,11 @@ public class ForecastClientController {
     WeatherForecastClientService weatherForecastClientService;
 
     @GetMapping("/getForecast/{numberOfDays}/{lat}/{lon}")
-    public Mono<WeatherForecast> getForecast(@PathVariable(name = "lat") Double latitude,
+    public Mono<String> getForecast(@PathVariable(name = "lat") Double latitude,
                                              @PathVariable(name = "lon")Double longitude,
                                              @PathVariable(name = "numberOfDays")Integer numberOfDays){
-        System.out.println("forecast client controller called days:"+numberOfDays+ " lat " + latitude + " long" + longitude );
-
-        return weatherForecastClientService.getForecast(latitude, longitude, numberOfDays);
+        System.out.println("forecast client controller called days: "+numberOfDays+ " lat " + latitude + " long " + longitude );
+        WeatherForecast forecast = weatherForecastClientService.getForecast(latitude, longitude, numberOfDays).block();
+        return Mono.just(forecast.getForecastForTimePeriod(numberOfDays));
     }
 }

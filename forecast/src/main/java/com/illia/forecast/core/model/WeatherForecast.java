@@ -51,7 +51,7 @@ public class WeatherForecast {
                     .append(weather.getPrecipitationProbability()).append("\nHumidity: ")
                     .append(weather.getHumidity()).append("%\nWind speed: ")
                     .append(weather.getWindSpeed()).append(" mps\nPressure: ")
-                    .append(weather.getPressure()).append(" hPa\n");
+                    .append(weather.getPressure()).append(" hPa\n\n");
         }
 
         return sb.toString();

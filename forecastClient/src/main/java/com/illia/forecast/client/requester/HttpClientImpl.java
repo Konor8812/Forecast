@@ -19,15 +19,13 @@ import java.net.http.HttpResponse;
 
 @Service
 @Slf4j
-@RequiredArgsConstructor
 public class HttpClientImpl implements HttpClient {
 
-    private final WebClient.Builder webBuilder;
 
     @Override
     public Mono<String> performRequest(String url) {
         try {
-            WebClient client = webBuilder.baseUrl(url).build();
+            WebClient client = WebClient.builder().baseUrl(url).build();
             return client.get()
                     .accept(MediaType.APPLICATION_JSON)
                     .retrieve()

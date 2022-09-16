@@ -8,8 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="forecastClient" />
-        <module name="forecast" />
+        <module name="Forecast" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="forecast" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

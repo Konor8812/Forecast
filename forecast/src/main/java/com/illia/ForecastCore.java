@@ -7,7 +7,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 public class ForecastCore {
 
     public static void main(String[] args) {
-        //SpringApplication.run(ForecastClient.class, args);
         new SpringApplicationBuilder().sources(ForecastCore.class).run(args);
     }
 }
