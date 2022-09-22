@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>Forecast</artifactId>
+        <artifactId>project-forecast</artifactId>
         <groupId>com.illia</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -14,12 +14,14 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <timestamp>${maven.build.timestamp}</timestamp>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.illia</groupId>
-            <artifactId>forecast</artifactId>
+            <artifactId>forecastCore</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -52,6 +54,11 @@
                     </from>
                     <to>
                         <image>forecast-client</image>
+                        <auth>
+                            <username>admirai</username>
+                            <password>glpat-nhbX9b5_3xWPf6MTjkvV</password>
+                        </auth>
+                        <image>registry.gitlab.com/admirai/forecast-client</image>
                         <tags>
                             <tag>latest</tag>
                         </tags>
@@ -61,6 +68,7 @@
                         <ports>
                             <port>8080</port>
                         </ports>
+                        <creationTime>${timestamp}</creationTime>
                     </container>
                 </configuration>
             </plugin>

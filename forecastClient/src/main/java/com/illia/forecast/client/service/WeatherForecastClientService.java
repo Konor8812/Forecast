@@ -16,11 +16,9 @@ public class WeatherForecastClientService {
     private final ForecastClientConfig config;
     private final ForecastRequester requester;
 
-    public Mono<WeatherForecast> getForecast(Double lat, Double lon, Integer numOfDays){
-
-        System.out.println(config.getUrl());
+    public Mono<WeatherForecast> getForecast(Double lat, Double lon){
         String urlWithParams = String.format("%s/%f/%f", config.getUrl(), lat, lon);
-
+        System.out.println("url to go " + urlWithParams);
         return requester.getForecast(urlWithParams);
     }
 

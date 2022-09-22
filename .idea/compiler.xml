@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="forecastCore" />
         <module name="forecastClient" />
-        <module name="Forecast" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Forecast" target="11" />
       <module name="forecast" target="11" />
     </bytecodeTargetLevel>
   </component>

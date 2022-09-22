@@ -3,14 +3,20 @@ version: '3.3'
 services:
 
   core:
+    environment:
+      WORKDIR: usr/app
     build:
-      context: ../forecast
+      context: ../forecastCore
       dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+
 
   client:
     build:
       context: ../forecastClient
       dockerfile: Dockerfile
-
+    ports:
+      - "8082:8082"
     depends_on:
       - core

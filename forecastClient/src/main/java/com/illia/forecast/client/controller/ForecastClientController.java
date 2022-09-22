@@ -24,7 +24,7 @@ public class ForecastClientController {
                                              @PathVariable(name = "lon")Double longitude,
                                              @PathVariable(name = "numberOfDays")Integer numberOfDays){
         System.out.println("forecast client controller called days: "+numberOfDays+ " lat " + latitude + " long " + longitude );
-        WeatherForecast forecast = weatherForecastClientService.getForecast(latitude, longitude, numberOfDays).block();
+        WeatherForecast forecast = weatherForecastClientService.getForecast(latitude, longitude).block();
         return Mono.just(forecast.getForecastForTimePeriod(numberOfDays));
     }
 }
