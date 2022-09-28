@@ -4,17 +4,18 @@ package com.illia.forecast.client.controller;
 import com.illia.forecast.client.service.WeatherForecastClientService;
 import com.illia.forecast.core.model.WeatherForecast;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
+
 @RestController
 @RequestMapping(path = "${client.baseUrl}")
 public class ForecastClientController {
 
-//http://localhost:8081/api/forecast/50.523/30.24
 
     @Autowired
     WeatherForecastClientService weatherForecastClientService;

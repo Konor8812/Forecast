@@ -1,2 +1,4 @@
 weather-forecast-client:
-  url: "http://some-other-url"
+  url: "http://forecast-core.default.svc.cluster.local/home/forecast"
+
+#  //http://forecast-core.default.svc.cluster.local

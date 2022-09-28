@@ -1,0 +1,977 @@
+* 
+* ==> Audit <==
+* |---------|-----------------|----------|----------------------|---------|---------------------|---------------------|
+| Command |      Args       | Profile  |         User         | Version |     Start Time      |      End Time       |
+|---------|-----------------|----------|----------------------|---------|---------------------|---------------------|
+| start   |                 | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:09 MSK | 22 Sep 22 12:12 MSK |
+| stop    |                 | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:16 MSK | 22 Sep 22 12:16 MSK |
+| stop    | all             | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:17 MSK | 22 Sep 22 12:17 MSK |
+| start   |                 | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:18 MSK | 22 Sep 22 12:18 MSK |
+| stop    | all             | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:19 MSK | 22 Sep 22 12:19 MSK |
+| delete  |                 | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:21 MSK | 22 Sep 22 12:21 MSK |
+| delete  | all             | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 22 Sep 22 12:21 MSK |                     |
+| start   |                 | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 26 Sep 22 12:14 MSK |                     |
+| start   | --driver=hyperv | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 26 Sep 22 12:16 MSK |                     |
+| delete  | .               | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 26 Sep 22 12:17 MSK |                     |
+| delete  |                 | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 26 Sep 22 12:17 MSK | 26 Sep 22 12:17 MSK |
+| start   | --driver=hyperv | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 26 Sep 22 12:17 MSK |                     |
+| start   | --driver=hyperv | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 26 Sep 22 12:17 MSK | 26 Sep 22 12:18 MSK |
+| addons  | enable ingress  | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 27 Sep 22 12:23 MSK |                     |
+| addons  | enable ingress  | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 27 Sep 22 13:17 MSK |                     |
+| addons  | enable ingress  | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 27 Sep 22 16:28 MSK |                     |
+| addons  | enable ingress  | minikube | WIN-PILPL2VAMEV\user | v1.27.0 | 27 Sep 22 16:39 MSK |                     |
+|---------|-----------------|----------|----------------------|---------|---------------------|---------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/09/26 12:17:37
+Running on machine: WIN-PILPL2VAMEV
+Binary: Built with gc go1.19.1 for windows/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0926 12:17:37.725866   19968 out.go:296] Setting OutFile to fd 84 ...
+I0926 12:17:37.796367   19968 out.go:343] TERM=,COLORTERM=, which probably does not support color
+I0926 12:17:37.796367   19968 out.go:309] Setting ErrFile to fd 88...
+I0926 12:17:37.796367   19968 out.go:343] TERM=,COLORTERM=, which probably does not support color
+I0926 12:17:37.810923   19968 out.go:303] Setting JSON to false
+I0926 12:17:37.814670   19968 start.go:115] hostinfo: {"hostname":"WIN-PILPL2VAMEV","uptime":864112,"bootTime":1663319745,"procs":253,"os":"windows","platform":"Microsoft Windows 10 Pro","platformFamily":"Standalone Workstation","platformVersion":"10.0.19043 Build 19043","kernelVersion":"10.0.19043 Build 19043","kernelArch":"x86_64","virtualizationSystem":"","virtualizationRole":"","hostId":"cbe63cfd-2a79-4448-9e73-fdea87ef9c57"}
+W0926 12:17:37.814670   19968 start.go:123] gopshost.Virtualization returned error: not implemented yet
+I0926 12:17:37.815867   19968 out.go:177] * minikube v1.27.0 on Microsoft Windows 10 Pro 10.0.19043 Build 19043
+I0926 12:17:37.817373   19968 notify.go:214] Checking for updates...
+W0926 12:17:37.817867   19968 out.go:239] ! Kubernetes 1.25.0 has a known issue with resolv.conf. minikube is using a workaround that should work for most use cases.
+W0926 12:17:37.817867   19968 out.go:239] ! For more information, see: https://github.com/kubernetes/kubernetes/issues/112135
+I0926 12:17:37.817867   19968 driver.go:365] Setting default libvirt URI to qemu:///system
+I0926 12:17:38.691398   19968 out.go:177] * Using the hyperv driver based on user configuration
+I0926 12:17:38.698897   19968 start.go:284] selected driver: hyperv
+I0926 12:17:38.698897   19968 start.go:808] validating driver "hyperv" against <nil>
+I0926 12:17:38.698897   19968 start.go:819] status for hyperv: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0926 12:17:38.699369   19968 start_flags.go:296] no existing cluster config was found, will generate one from the flags 
+I0926 12:17:38.718368   19968 start_flags.go:377] Using suggested 4000MB memory alloc based on sys=16268MB, container=0MB
+I0926 12:17:38.718870   19968 start_flags.go:835] Wait components to verify : map[apiserver:true system_pods:true]
+I0926 12:17:38.718870   19968 cni.go:95] Creating CNI manager for ""
+I0926 12:17:38.718870   19968 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0926 12:17:38.718870   19968 start_flags.go:310] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.34@sha256:f2a1e577e43fd6769f35cdb938f6d21c3dacfd763062d119cade738fa244720c Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.0 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\user:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:}
+I0926 12:17:38.718870   19968 iso.go:124] acquiring lock: {Name:mkd4a5617a0e2c90a5effef304b93a582767cef4 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0926 12:17:38.729867   19968 out.go:177] * Starting control plane node minikube in cluster minikube
+I0926 12:17:38.730414   19968 preload.go:132] Checking if preload exists for k8s version v1.25.0 and runtime docker
+I0926 12:17:38.730866   19968 preload.go:148] Found local preload: C:\Users\user\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.25.0-docker-overlay2-amd64.tar.lz4
+I0926 12:17:38.730866   19968 cache.go:57] Caching tarball of preloaded images
+I0926 12:17:38.730866   19968 preload.go:174] Found C:\Users\user\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.25.0-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0926 12:17:38.730866   19968 cache.go:60] Finished verifying existence of preloaded tar for  v1.25.0 on docker
+I0926 12:17:38.731367   19968 profile.go:148] Saving config to C:\Users\user\.minikube\profiles\minikube\config.json ...
+I0926 12:17:38.731367   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\config.json: {Name:mk9ad62bba176375f4633db264b56909ce29fd55 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:17:38.731867   19968 cache.go:208] Successfully downloaded all kic artifacts
+I0926 12:17:38.731867   19968 start.go:364] acquiring machines lock for minikube: {Name:mk22a794c54f923a24f23554869ea2bc80c98a2e Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0926 12:17:38.731867   19968 start.go:368] acquired machines lock for "minikube" in 0s
+I0926 12:17:38.731867   19968 start.go:93] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.27.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.34@sha256:f2a1e577e43fd6769f35cdb938f6d21c3dacfd763062d119cade738fa244720c Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.0 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.25.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\user:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:} &{Name: IP: Port:8443 KubernetesVersion:v1.25.0 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0926 12:17:38.732367   19968 start.go:125] createHost starting for "" (driver="hyperv")
+I0926 12:17:38.733367   19968 out.go:204] * Creating hyperv VM (CPUs=2, Memory=4000MB, Disk=20000MB) ...
+I0926 12:17:38.733867   19968 start.go:159] libmachine.API.Create for "minikube" (driver="hyperv")
+I0926 12:17:38.733867   19968 client.go:168] LocalClient.Create starting
+I0926 12:17:38.733867   19968 main.go:134] libmachine: Reading certificate data from C:\Users\user\.minikube\certs\ca.pem
+I0926 12:17:38.737367   19968 main.go:134] libmachine: Decoding PEM data...
+I0926 12:17:38.737367   19968 main.go:134] libmachine: Parsing certificate...
+I0926 12:17:38.737367   19968 main.go:134] libmachine: Reading certificate data from C:\Users\user\.minikube\certs\cert.pem
+I0926 12:17:38.740367   19968 main.go:134] libmachine: Decoding PEM data...
+I0926 12:17:38.740367   19968 main.go:134] libmachine: Parsing certificate...
+I0926 12:17:38.740367   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @(Get-Module -ListAvailable hyper-v).Name | Get-Unique
+I0926 12:17:39.047366   19968 main.go:134] libmachine: [stdout =====>] : Hyper-V
+
+I0926 12:17:39.047366   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:39.047366   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(([System.Security.Principal.SecurityIdentifier]::new("S-1-5-32-578")))
+I0926 12:17:39.397365   19968 main.go:134] libmachine: [stdout =====>] : False
+
+I0926 12:17:39.397365   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:39.397365   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+I0926 12:17:39.664880   19968 main.go:134] libmachine: [stdout =====>] : True
+
+I0926 12:17:39.664880   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:39.664880   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive [Console]::OutputEncoding = [Text.Encoding]::UTF8; ConvertTo-Json @(Hyper-V\Get-VMSwitch|Select Id, Name, SwitchType|Where-Object {($_.SwitchType -eq 'External') -or ($_.Id -eq 'c08cb7b8-9b3c-408e-8e30-5e16a3aeb444')}|Sort-Object -Property SwitchType)
+I0926 12:17:40.660366   19968 main.go:134] libmachine: [stdout =====>] : [
+    {
+        "Id":  "c08cb7b8-9b3c-408e-8e30-5e16a3aeb444",
+        "Name":  "Default Switch",
+        "SwitchType":  1
+    }
+]
+
+I0926 12:17:40.660366   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:40.661367   19968 main.go:134] libmachine: Downloading C:\Users\user\.minikube\cache\boot2docker.iso from file://C:/Users/user/.minikube/cache/iso/amd64/minikube-v1.27.0-amd64.iso...
+I0926 12:17:40.890367   19968 main.go:134] libmachine: Creating SSH key...
+I0926 12:17:41.011664   19968 main.go:134] libmachine: Creating VM...
+I0926 12:17:41.011664   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive [Console]::OutputEncoding = [Text.Encoding]::UTF8; ConvertTo-Json @(Hyper-V\Get-VMSwitch|Select Id, Name, SwitchType|Where-Object {($_.SwitchType -eq 'External') -or ($_.Id -eq 'c08cb7b8-9b3c-408e-8e30-5e16a3aeb444')}|Sort-Object -Property SwitchType)
+I0926 12:17:41.683535   19968 main.go:134] libmachine: [stdout =====>] : [
+    {
+        "Id":  "c08cb7b8-9b3c-408e-8e30-5e16a3aeb444",
+        "Name":  "Default Switch",
+        "SwitchType":  1
+    }
+]
+
+I0926 12:17:41.683535   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:41.683535   19968 main.go:134] libmachine: Using switch "Default Switch"
+I0926 12:17:41.683535   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive @([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")
+I0926 12:17:42.030413   19968 main.go:134] libmachine: [stdout =====>] : True
+
+I0926 12:17:42.030413   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:42.030413   19968 main.go:134] libmachine: Creating VHD
+I0926 12:17:42.030413   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\New-VHD -Path 'C:\Users\user\.minikube\machines\minikube\fixed.vhd' -SizeBytes 10MB -Fixed
+I0926 12:17:43.408600   19968 main.go:134] libmachine: [stdout =====>] : 
+
+ComputerName            : WIN-PILPL2VAMEV
+Path                    : C:\Users\user\.minikube\machines\minikube\fixed.vhd
+VhdFormat               : VHD
+VhdType                 : Fixed
+FileSize                : 10486272
+Size                    : 10485760
+MinimumSize             : 
+LogicalSectorSize       : 512
+PhysicalSectorSize      : 512
+BlockSize               : 0
+ParentPath              : 
+DiskIdentifier          : 7FB350DF-CCF4-49E7-A5D7-AEE5AFCD022C
+FragmentationPercentage : 0
+Alignment               : 1
+Attached                : False
+DiskNumber              : 
+IsPMEMCompatible        : False
+AddressAbstractionType  : None
+Number                  : 
+
+
+
+
+I0926 12:17:43.408600   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:43.408600   19968 main.go:134] libmachine: Writing magic tar header
+I0926 12:17:43.408600   19968 main.go:134] libmachine: Writing SSH key tar header
+I0926 12:17:43.412101   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Convert-VHD -Path 'C:\Users\user\.minikube\machines\minikube\fixed.vhd' -DestinationPath 'C:\Users\user\.minikube\machines\minikube\disk.vhd' -VHDType Dynamic -DeleteSource
+I0926 12:17:44.826798   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:44.826798   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:44.826798   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Resize-VHD -Path 'C:\Users\user\.minikube\machines\minikube\disk.vhd' -SizeBytes 20000MB
+I0926 12:17:46.153531   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:46.153531   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:46.153531   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\New-VM minikube -Path 'C:\Users\user\.minikube\machines\minikube' -SwitchName 'Default Switch' -MemoryStartupBytes 4000MB
+I0926 12:17:47.153650   19968 main.go:134] libmachine: [stdout =====>] : 
+Name     State CPUUsage(%!)(MISSING) MemoryAssigned(M) Uptime   Status             Version
+----     ----- ----------- ----------------- ------   ------             -------
+minikube Off   0           0                 00:00:00 Operating normally 9.0    
+
+
+
+I0926 12:17:47.153650   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:47.153650   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Set-VMMemory -VMName minikube -DynamicMemoryEnabled $false
+I0926 12:17:47.573026   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:47.573026   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:47.573026   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Set-VMProcessor minikube -Count 2
+I0926 12:17:47.996461   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:47.996461   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:47.996461   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Set-VMDvdDrive -VMName minikube -Path 'C:\Users\user\.minikube\machines\minikube\boot2docker.iso'
+I0926 12:17:48.578997   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:48.578997   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:48.578997   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Add-VMHardDiskDrive -VMName minikube -Path 'C:\Users\user\.minikube\machines\minikube\disk.vhd'
+I0926 12:17:49.227262   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:49.227262   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:49.227262   19968 main.go:134] libmachine: Starting VM...
+I0926 12:17:49.227262   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive Hyper-V\Start-VM minikube
+I0926 12:17:54.934783   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:54.934783   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:54.934783   19968 main.go:134] libmachine: Waiting for host to start...
+I0926 12:17:54.934783   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:17:55.367283   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:17:55.367283   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:55.367283   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:17:55.940853   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:55.940853   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:56.941025   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:17:57.334812   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:17:57.334812   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:57.334812   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:17:57.871782   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:57.871782   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:58.872060   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:17:59.269985   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:17:59.269985   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:17:59.269985   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:17:59.809984   19968 main.go:134] libmachine: [stdout =====>] : 
+I0926 12:17:59.809984   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:00.810557   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:01.218058   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:01.218058   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:01.218058   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:01.764058   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:01.764058   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:01.764058   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:02.151188   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:02.151188   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:02.151188   19968 machine.go:88] provisioning docker machine ...
+I0926 12:18:02.151731   19968 buildroot.go:166] provisioning hostname "minikube"
+I0926 12:18:02.152222   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:02.533332   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:02.533332   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:02.533332   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:03.078417   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:03.078417   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:03.080912   19968 main.go:134] libmachine: Using SSH client type: native
+I0926 12:18:03.086965   19968 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x87a860] 0x87d7e0 <nil>  [] 0s} 172.31.238.249 22 <nil> <nil>}
+I0926 12:18:03.086965   19968 main.go:134] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I0926 12:18:03.211446   19968 main.go:134] libmachine: SSH cmd err, output: <nil>: minikube
+
+I0926 12:18:03.211446   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:03.595989   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:03.595989   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:03.595989   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:04.135021   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:04.135021   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:04.137387   19968 main.go:134] libmachine: Using SSH client type: native
+I0926 12:18:04.137387   19968 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x87a860] 0x87d7e0 <nil>  [] 0s} 172.31.238.249 22 <nil> <nil>}
+I0926 12:18:04.137387   19968 main.go:134] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I0926 12:18:04.251277   19968 main.go:134] libmachine: SSH cmd err, output: <nil>: 
+I0926 12:18:04.251386   19968 buildroot.go:172] set auth options {CertDir:C:\Users\user\.minikube CaCertPath:C:\Users\user\.minikube\certs\ca.pem CaPrivateKeyPath:C:\Users\user\.minikube\certs\ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:C:\Users\user\.minikube\machines\server.pem ServerKeyPath:C:\Users\user\.minikube\machines\server-key.pem ClientKeyPath:C:\Users\user\.minikube\certs\key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:C:\Users\user\.minikube\certs\cert.pem ServerCertSANs:[] StorePath:C:\Users\user\.minikube}
+I0926 12:18:04.251386   19968 buildroot.go:174] setting up certificates
+I0926 12:18:04.251887   19968 provision.go:83] configureAuth start
+I0926 12:18:04.251887   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:04.637506   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:04.637506   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:04.637506   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:05.191306   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:05.191306   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:05.191306   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:05.597307   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:05.597307   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:05.597307   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:06.165806   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:06.165806   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:06.167352   19968 provision.go:138] copyHostCerts
+I0926 12:18:06.169316   19968 exec_runner.go:144] found C:\Users\user\.minikube/ca.pem, removing ...
+I0926 12:18:06.169806   19968 exec_runner.go:207] rm: C:\Users\user\.minikube\ca.pem
+I0926 12:18:06.169806   19968 exec_runner.go:151] cp: C:\Users\user\.minikube\certs\ca.pem --> C:\Users\user\.minikube/ca.pem (1070 bytes)
+I0926 12:18:06.170809   19968 exec_runner.go:144] found C:\Users\user\.minikube/cert.pem, removing ...
+I0926 12:18:06.170809   19968 exec_runner.go:207] rm: C:\Users\user\.minikube\cert.pem
+I0926 12:18:06.170809   19968 exec_runner.go:151] cp: C:\Users\user\.minikube\certs\cert.pem --> C:\Users\user\.minikube/cert.pem (1115 bytes)
+I0926 12:18:06.174806   19968 exec_runner.go:144] found C:\Users\user\.minikube/key.pem, removing ...
+I0926 12:18:06.174806   19968 exec_runner.go:207] rm: C:\Users\user\.minikube\key.pem
+I0926 12:18:06.175309   19968 exec_runner.go:151] cp: C:\Users\user\.minikube\certs\key.pem --> C:\Users\user\.minikube/key.pem (1675 bytes)
+I0926 12:18:06.175809   19968 provision.go:112] generating server cert: C:\Users\user\.minikube\machines\server.pem ca-key=C:\Users\user\.minikube\certs\ca.pem private-key=C:\Users\user\.minikube\certs\ca-key.pem org=user.minikube san=[172.31.238.249 172.31.238.249 localhost 127.0.0.1 minikube minikube]
+I0926 12:18:06.327807   19968 provision.go:172] copyRemoteCerts
+I0926 12:18:06.333806   19968 ssh_runner.go:195] Run: sudo mkdir -p /etc/docker /etc/docker /etc/docker
+I0926 12:18:06.333806   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:06.739320   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:06.739320   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:06.739320   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:07.300812   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:07.300812   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:07.300945   19968 sshutil.go:53] new ssh client: &{IP:172.31.238.249 Port:22 SSHKeyPath:C:\Users\user\.minikube\machines\minikube\id_rsa Username:docker}
+I0926 12:18:07.384858   19968 ssh_runner.go:235] Completed: sudo mkdir -p /etc/docker /etc/docker /etc/docker: (1.0510518s)
+I0926 12:18:07.386365   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\certs\ca.pem --> /etc/docker/ca.pem (1070 bytes)
+I0926 12:18:07.401487   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\machines\server.pem --> /etc/docker/server.pem (1196 bytes)
+I0926 12:18:07.416358   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\machines\server-key.pem --> /etc/docker/server-key.pem (1679 bytes)
+I0926 12:18:07.431359   19968 provision.go:86] duration metric: configureAuth took 3.179472s
+I0926 12:18:07.431359   19968 buildroot.go:189] setting minikube options for container-runtime
+I0926 12:18:07.431359   19968 config.go:180] Loaded profile config "minikube": Driver=hyperv, ContainerRuntime=docker, KubernetesVersion=v1.25.0
+I0926 12:18:07.431359   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:07.834932   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:07.834932   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:07.834932   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:08.409636   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:08.409636   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:08.412114   19968 main.go:134] libmachine: Using SSH client type: native
+I0926 12:18:08.415113   19968 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x87a860] 0x87d7e0 <nil>  [] 0s} 172.31.238.249 22 <nil> <nil>}
+I0926 12:18:08.415113   19968 main.go:134] libmachine: About to run SSH command:
+df --output=fstype / | tail -n 1
+I0926 12:18:08.535614   19968 main.go:134] libmachine: SSH cmd err, output: <nil>: tmpfs
+
+I0926 12:18:08.535614   19968 buildroot.go:70] root file system type: tmpfs
+I0926 12:18:08.536114   19968 provision.go:309] Updating docker unit: /lib/systemd/system/docker.service ...
+I0926 12:18:08.536114   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:08.966113   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:08.966113   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:08.966113   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:09.542457   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:09.542457   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:09.544455   19968 main.go:134] libmachine: Using SSH client type: native
+I0926 12:18:09.544955   19968 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x87a860] 0x87d7e0 <nil>  [] 0s} 172.31.238.249 22 <nil> <nil>}
+I0926 12:18:09.544955   19968 main.go:134] libmachine: About to run SSH command:
+sudo mkdir -p /lib/systemd/system && printf %!s(MISSING) "[Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=hyperv --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP \$MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+" | sudo tee /lib/systemd/system/docker.service.new
+I0926 12:18:09.668930   19968 main.go:134] libmachine: SSH cmd err, output: <nil>: [Unit]
+Description=Docker Application Container Engine
+Documentation=https://docs.docker.com
+After=network.target  minikube-automount.service docker.socket
+Requires= minikube-automount.service docker.socket 
+StartLimitBurst=3
+StartLimitIntervalSec=60
+
+[Service]
+Type=notify
+Restart=on-failure
+
+
+
+# This file is a systemd drop-in unit that inherits from the base dockerd configuration.
+# The base configuration already specifies an 'ExecStart=...' command. The first directive
+# here is to clear out that command inherited from the base configuration. Without this,
+# the command from the base configuration and the command specified here are treated as
+# a sequence of commands, which is not the desired behavior, nor is it valid -- systemd
+# will catch this invalid input and refuse to start the service with an error like:
+#  Service has more than one ExecStart= setting, which is only allowed for Type=oneshot services.
+
+# NOTE: default-ulimit=nofile is set to an arbitrary number for consistency with other
+# container runtimes. If left unlimited, it may result in OOM issues with MySQL.
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=hyperv --insecure-registry 10.96.0.0/12 
+ExecReload=/bin/kill -s HUP $MAINPID
+
+# Having non-zero Limit*s causes performance problems due to accounting overhead
+# in the kernel. We recommend using cgroups to do container-local accounting.
+LimitNOFILE=infinity
+LimitNPROC=infinity
+LimitCORE=infinity
+
+# Uncomment TasksMax if your systemd version supports it.
+# Only systemd 226 and above support this version.
+TasksMax=infinity
+TimeoutStartSec=0
+
+# set delegate yes so that systemd does not reset the cgroups of docker containers
+Delegate=yes
+
+# kill only the docker process, not all processes in the cgroup
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+I0926 12:18:09.670405   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:10.071005   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:10.071005   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:10.071005   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:10.636378   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:10.636378   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:10.638868   19968 main.go:134] libmachine: Using SSH client type: native
+I0926 12:18:10.638868   19968 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x87a860] 0x87d7e0 <nil>  [] 0s} 172.31.238.249 22 <nil> <nil>}
+I0926 12:18:10.638868   19968 main.go:134] libmachine: About to run SSH command:
+sudo diff -u /lib/systemd/system/docker.service /lib/systemd/system/docker.service.new || { sudo mv /lib/systemd/system/docker.service.new /lib/systemd/system/docker.service; sudo systemctl -f daemon-reload && sudo systemctl -f enable docker && sudo systemctl -f restart docker; }
+I0926 12:18:11.127753   19968 main.go:134] libmachine: SSH cmd err, output: <nil>: diff: can't stat '/lib/systemd/system/docker.service': No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /usr/lib/systemd/system/docker.service.
+
+I0926 12:18:11.127753   19968 machine.go:91] provisioned docker machine in 8.9765655s
+I0926 12:18:11.127753   19968 client.go:171] LocalClient.Create took 32.3938865s
+I0926 12:18:11.127753   19968 start.go:167] duration metric: libmachine.API.Create for "minikube" took 32.3938865s
+I0926 12:18:11.127753   19968 start.go:300] post-start starting for "minikube" (driver="hyperv")
+I0926 12:18:11.127753   19968 start.go:328] creating required directories: [/etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs]
+I0926 12:18:11.133754   19968 ssh_runner.go:195] Run: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs
+I0926 12:18:11.133754   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:11.533253   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:11.533253   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:11.533253   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:12.146254   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:12.146254   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:12.146254   19968 sshutil.go:53] new ssh client: &{IP:172.31.238.249 Port:22 SSHKeyPath:C:\Users\user\.minikube\machines\minikube\id_rsa Username:docker}
+I0926 12:18:12.228828   19968 ssh_runner.go:235] Completed: sudo mkdir -p /etc/kubernetes/addons /etc/kubernetes/manifests /var/tmp/minikube /var/lib/minikube /var/lib/minikube/certs /var/lib/minikube/images /var/lib/minikube/binaries /tmp/gvisor /usr/share/ca-certificates /etc/ssl/certs: (1.0950733s)
+I0926 12:18:12.234253   19968 ssh_runner.go:195] Run: cat /etc/os-release
+I0926 12:18:12.237762   19968 info.go:137] Remote host: Buildroot 2021.02.12
+I0926 12:18:12.239253   19968 filesync.go:126] Scanning C:\Users\user\.minikube\addons for local assets ...
+I0926 12:18:12.239253   19968 filesync.go:126] Scanning C:\Users\user\.minikube\files for local assets ...
+I0926 12:18:12.239753   19968 start.go:303] post-start completed in 1.1119992s
+I0926 12:18:12.240755   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:12.659254   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:12.659254   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:12.659254   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:13.251259   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:13.251259   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:13.251432   19968 profile.go:148] Saving config to C:\Users\user\.minikube\profiles\minikube\config.json ...
+I0926 12:18:13.252753   19968 start.go:128] duration metric: createHost completed in 34.5203866s
+I0926 12:18:13.253253   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:13.654905   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:13.654905   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:13.654905   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:14.273481   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:14.273481   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:14.275910   19968 main.go:134] libmachine: Using SSH client type: native
+I0926 12:18:14.275910   19968 main.go:134] libmachine: &{{{<nil> 0 [] [] []} docker [0x87a860] 0x87d7e0 <nil>  [] 0s} 172.31.238.249 22 <nil> <nil>}
+I0926 12:18:14.275910   19968 main.go:134] libmachine: About to run SSH command:
+date +%!s(MISSING).%!N(MISSING)
+I0926 12:18:14.390969   19968 main.go:134] libmachine: SSH cmd err, output: <nil>: 1664183894.381942843
+
+I0926 12:18:14.390969   19968 fix.go:207] guest clock: 1664183894.381942843
+I0926 12:18:14.390969   19968 fix.go:220] Guest: 2022-09-26 12:18:14.381942843 +0300 MSK Remote: 2022-09-26 12:18:13.2527537 +0300 MSK m=+35.610345701 (delta=1.129189143s)
+I0926 12:18:14.391337   19968 fix.go:191] guest clock delta is within tolerance: 1.129189143s
+I0926 12:18:14.391337   19968 start.go:83] releasing machines lock for "minikube", held for 35.6594705s
+I0926 12:18:14.391337   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:14.798780   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:14.798780   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:14.798780   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:15.363372   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:15.363372   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:15.375872   19968 ssh_runner.go:195] Run: curl -sS -m 2 https://registry.k8s.io/
+I0926 12:18:15.376873   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:15.380873   19968 ssh_runner.go:195] Run: systemctl --version
+I0926 12:18:15.380873   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:15.824144   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:15.824144   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:15.824144   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:15.824144   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:15.824144   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:15.824144   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:16.431886   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:16.431886   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:16.431886   19968 sshutil.go:53] new ssh client: &{IP:172.31.238.249 Port:22 SSHKeyPath:C:\Users\user\.minikube\machines\minikube\id_rsa Username:docker}
+I0926 12:18:16.441213   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:16.441213   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:16.441213   19968 sshutil.go:53] new ssh client: &{IP:172.31.238.249 Port:22 SSHKeyPath:C:\Users\user\.minikube\machines\minikube\id_rsa Username:docker}
+I0926 12:18:16.675958   19968 ssh_runner.go:235] Completed: curl -sS -m 2 https://registry.k8s.io/: (1.3000853s)
+I0926 12:18:16.675958   19968 ssh_runner.go:235] Completed: systemctl --version: (1.2950849s)
+I0926 12:18:16.676157   19968 preload.go:132] Checking if preload exists for k8s version v1.25.0 and runtime docker
+I0926 12:18:16.680155   19968 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0926 12:18:16.695272   19968 docker.go:611] Got preloaded images: 
+I0926 12:18:16.695272   19968 docker.go:617] registry.k8s.io/kube-apiserver:v1.25.0 wasn't preloaded
+I0926 12:18:16.700772   19968 ssh_runner.go:195] Run: sudo cat /var/lib/docker/image/overlay2/repositories.json
+I0926 12:18:16.712772   19968 ssh_runner.go:195] Run: which lz4
+I0926 12:18:16.725773   19968 ssh_runner.go:195] Run: stat -c "%!s(MISSING) %!y(MISSING)" /preloaded.tar.lz4
+I0926 12:18:16.728272   19968 ssh_runner.go:352] existence check for /preloaded.tar.lz4: stat -c "%!s(MISSING) %!y(MISSING)" /preloaded.tar.lz4: Process exited with status 1
+stdout:
+
+stderr:
+stat: cannot statx '/preloaded.tar.lz4': No such file or directory
+I0926 12:18:16.728272   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\cache\preloaded-tarball\preloaded-images-k8s-v18-v1.25.0-docker-overlay2-amd64.tar.lz4 --> /preloaded.tar.lz4 (404093393 bytes)
+I0926 12:18:17.666773   19968 docker.go:576] Took 0.946500 seconds to copy over tarball
+I0926 12:18:17.672272   19968 ssh_runner.go:195] Run: sudo tar -I lz4 -C /var -xf /preloaded.tar.lz4
+I0926 12:18:20.217955   19968 ssh_runner.go:235] Completed: sudo tar -I lz4 -C /var -xf /preloaded.tar.lz4: (2.5456834s)
+I0926 12:18:20.217955   19968 ssh_runner.go:146] rm: /preloaded.tar.lz4
+I0926 12:18:20.252272   19968 ssh_runner.go:195] Run: sudo cat /var/lib/docker/image/overlay2/repositories.json
+I0926 12:18:20.258773   19968 ssh_runner.go:362] scp memory --> /var/lib/docker/image/overlay2/repositories.json (2628 bytes)
+I0926 12:18:20.274772   19968 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0926 12:18:20.355801   19968 ssh_runner.go:195] Run: sudo systemctl restart docker
+I0926 12:18:21.635388   19968 ssh_runner.go:235] Completed: sudo systemctl restart docker: (1.2795866s)
+I0926 12:18:21.641389   19968 ssh_runner.go:195] Run: sudo systemctl cat docker.service
+I0926 12:18:21.655389   19968 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service containerd
+I0926 12:18:21.670388   19968 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service crio
+I0926 12:18:21.683888   19968 ssh_runner.go:195] Run: sudo systemctl stop -f crio
+I0926 12:18:21.707888   19968 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service crio
+I0926 12:18:21.715890   19968 ssh_runner.go:195] Run: /bin/bash -c "sudo mkdir -p /etc && printf %!s(MISSING) "runtime-endpoint: unix:///var/run/cri-dockerd.sock
+image-endpoint: unix:///var/run/cri-dockerd.sock
+" | sudo tee /etc/crictl.yaml"
+I0926 12:18:21.732888   19968 ssh_runner.go:195] Run: sudo systemctl unmask docker.service
+I0926 12:18:21.809215   19968 ssh_runner.go:195] Run: sudo systemctl enable docker.socket
+I0926 12:18:21.887215   19968 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0926 12:18:21.969215   19968 ssh_runner.go:195] Run: sudo systemctl restart docker
+I0926 12:18:23.174015   19968 ssh_runner.go:235] Completed: sudo systemctl restart docker: (1.2048003s)
+I0926 12:18:23.180343   19968 ssh_runner.go:195] Run: sudo systemctl enable cri-docker.socket
+I0926 12:18:23.266840   19968 ssh_runner.go:195] Run: sudo systemctl daemon-reload
+I0926 12:18:23.355840   19968 ssh_runner.go:195] Run: sudo systemctl start cri-docker.socket
+I0926 12:18:23.368849   19968 start.go:450] Will wait 60s for socket path /var/run/cri-dockerd.sock
+I0926 12:18:23.374341   19968 ssh_runner.go:195] Run: stat /var/run/cri-dockerd.sock
+I0926 12:18:23.377871   19968 start.go:471] Will wait 60s for crictl version
+I0926 12:18:23.383842   19968 ssh_runner.go:195] Run: sudo crictl version
+I0926 12:18:23.456840   19968 start.go:480] Version:  0.1.0
+RuntimeName:  docker
+RuntimeVersion:  20.10.18
+RuntimeApiVersion:  1.41.0
+I0926 12:18:23.459844   19968 ssh_runner.go:195] Run: docker version --format {{.Server.Version}}
+I0926 12:18:23.480841   19968 ssh_runner.go:195] Run: docker version --format {{.Server.Version}}
+I0926 12:18:23.500340   19968 out.go:204] * Preparing Kubernetes v1.25.0 on Docker 20.10.18 ...
+I0926 12:18:23.501340   19968 ip.go:166] getIPForInterface: searching for "vEthernet (Default Switch)"
+I0926 12:18:23.504340   19968 ip.go:180] "Radmin VPN" does not match prefix "vEthernet (Default Switch)"
+I0926 12:18:23.504340   19968 ip.go:175] found prefix matching interface for "vEthernet (Default Switch)": "vEthernet (Default Switch)"
+I0926 12:18:23.504340   19968 ip.go:201] Found interface: {Index:36 MTU:1500 Name:vEthernet (Default Switch) HardwareAddr:00:15:5d:40:57:6e Flags:up|broadcast|multicast}
+I0926 12:18:23.506341   19968 ip.go:204] interface addr: fe80::fca9:80c9:ace9:e41e/64
+I0926 12:18:23.506341   19968 ip.go:204] interface addr: 172.31.224.1/20
+I0926 12:18:23.511840   19968 ssh_runner.go:195] Run: grep 172.31.224.1	host.minikube.internal$ /etc/hosts
+I0926 12:18:23.514633   19968 ssh_runner.go:195] Run: /bin/bash -c "{ grep -v $'\thost.minikube.internal$' "/etc/hosts"; echo "172.31.224.1	host.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0926 12:18:23.522398   19968 preload.go:132] Checking if preload exists for k8s version v1.25.0 and runtime docker
+I0926 12:18:23.525341   19968 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0926 12:18:23.540009   19968 docker.go:611] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.25.0
+registry.k8s.io/kube-scheduler:v1.25.0
+registry.k8s.io/kube-controller-manager:v1.25.0
+registry.k8s.io/kube-proxy:v1.25.0
+registry.k8s.io/pause:3.8
+registry.k8s.io/etcd:3.5.4-0
+registry.k8s.io/coredns/coredns:v1.9.3
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0926 12:18:23.540009   19968 docker.go:542] Images already preloaded, skipping extraction
+I0926 12:18:23.543343   19968 ssh_runner.go:195] Run: docker images --format {{.Repository}}:{{.Tag}}
+I0926 12:18:23.558624   19968 docker.go:611] Got preloaded images: -- stdout --
+registry.k8s.io/kube-apiserver:v1.25.0
+registry.k8s.io/kube-scheduler:v1.25.0
+registry.k8s.io/kube-controller-manager:v1.25.0
+registry.k8s.io/kube-proxy:v1.25.0
+registry.k8s.io/pause:3.8
+registry.k8s.io/etcd:3.5.4-0
+registry.k8s.io/coredns/coredns:v1.9.3
+gcr.io/k8s-minikube/storage-provisioner:v5
+
+-- /stdout --
+I0926 12:18:23.558624   19968 cache_images.go:84] Images are preloaded, skipping loading
+I0926 12:18:23.561840   19968 ssh_runner.go:195] Run: docker info --format {{.CgroupDriver}}
+I0926 12:18:23.581840   19968 cni.go:95] Creating CNI manager for ""
+I0926 12:18:23.581840   19968 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0926 12:18:23.581840   19968 kubeadm.go:87] Using pod CIDR: 10.244.0.0/16
+I0926 12:18:23.581840   19968 kubeadm.go:156] kubeadm options: {CertDir:/var/lib/minikube/certs ServiceCIDR:10.96.0.0/12 PodSubnet:10.244.0.0/16 AdvertiseAddress:172.31.238.249 APIServerPort:8443 KubernetesVersion:v1.25.0 EtcdDataDir:/var/lib/minikube/etcd EtcdExtraArgs:map[] ClusterName:minikube NodeName:minikube DNSDomain:cluster.local CRISocket:/var/run/cri-dockerd.sock ImageRepository: ComponentOptions:[{Component:apiServer ExtraArgs:map[enable-admission-plugins:NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota] Pairs:map[certSANs:["127.0.0.1", "localhost", "172.31.238.249"]]} {Component:controllerManager ExtraArgs:map[allocate-node-cidrs:true leader-elect:false] Pairs:map[]} {Component:scheduler ExtraArgs:map[leader-elect:false] Pairs:map[]}] FeatureArgs:map[] NodeIP:172.31.238.249 CgroupDriver:systemd ClientCAFile:/var/lib/minikube/certs/ca.crt StaticPodPath:/etc/kubernetes/manifests ControlPlaneAddress:control-plane.minikube.internal KubeProxyOptions:map[] ResolvConfSearchRegression:true}
+I0926 12:18:23.582342   19968 kubeadm.go:161] kubeadm config:
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 172.31.238.249
+  bindPort: 8443
+bootstrapTokens:
+  - groups:
+      - system:bootstrappers:kubeadm:default-node-token
+    ttl: 24h0m0s
+    usages:
+      - signing
+      - authentication
+nodeRegistration:
+  criSocket: /var/run/cri-dockerd.sock
+  name: "minikube"
+  kubeletExtraArgs:
+    node-ip: 172.31.238.249
+  taints: []
+---
+apiVersion: kubeadm.k8s.io/v1beta3
+kind: ClusterConfiguration
+apiServer:
+  certSANs: ["127.0.0.1", "localhost", "172.31.238.249"]
+  extraArgs:
+    enable-admission-plugins: "NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota"
+controllerManager:
+  extraArgs:
+    allocate-node-cidrs: "true"
+    leader-elect: "false"
+scheduler:
+  extraArgs:
+    leader-elect: "false"
+certificatesDir: /var/lib/minikube/certs
+clusterName: mk
+controlPlaneEndpoint: control-plane.minikube.internal:8443
+etcd:
+  local:
+    dataDir: /var/lib/minikube/etcd
+    extraArgs:
+      proxy-refresh-interval: "70000"
+kubernetesVersion: v1.25.0
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+kind: KubeletConfiguration
+authentication:
+  x509:
+    clientCAFile: /var/lib/minikube/certs/ca.crt
+cgroupDriver: systemd
+clusterDomain: "cluster.local"
+# disable disk resource management by default
+imageGCHighThresholdPercent: 100
+evictionHard:
+  nodefs.available: "0%!"(MISSING)
+  nodefs.inodesFree: "0%!"(MISSING)
+  imagefs.available: "0%!"(MISSING)
+failSwapOn: false
+staticPodPath: /etc/kubernetes/manifests
+resolvConf: /etc/kubelet-resolv.conf
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+clusterCIDR: "10.244.0.0/16"
+metricsBindAddress: 0.0.0.0:10249
+conntrack:
+  maxPerCore: 0
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_established"
+  tcpEstablishedTimeout: 0s
+# Skip setting "net.netfilter.nf_conntrack_tcp_timeout_close"
+  tcpCloseWaitTimeout: 0s
+
+I0926 12:18:23.582342   19968 kubeadm.go:962] kubelet [Unit]
+Wants=docker.socket
+
+[Service]
+ExecStart=
+ExecStart=/var/lib/minikube/binaries/v1.25.0/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime=remote --container-runtime-endpoint=/var/run/cri-dockerd.sock --hostname-override=minikube --image-service-endpoint=/var/run/cri-dockerd.sock --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=172.31.238.249 --runtime-request-timeout=15m
+
+[Install]
+ config:
+{KubernetesVersion:v1.25.0 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:}
+I0926 12:18:23.587841   19968 ssh_runner.go:195] Run: sudo ls /var/lib/minikube/binaries/v1.25.0
+I0926 12:18:23.594844   19968 binaries.go:44] Found k8s binaries, skipping transfer
+I0926 12:18:23.600840   19968 ssh_runner.go:195] Run: sudo mkdir -p /etc/systemd/system/kubelet.service.d /lib/systemd/system /var/tmp/minikube
+I0926 12:18:23.606949   19968 ssh_runner.go:362] scp memory --> /etc/systemd/system/kubelet.service.d/10-kubeadm.conf (472 bytes)
+I0926 12:18:23.618484   19968 ssh_runner.go:362] scp memory --> /lib/systemd/system/kubelet.service (352 bytes)
+I0926 12:18:23.628058   19968 ssh_runner.go:362] scp memory --> /var/tmp/minikube/kubeadm.yaml.new (2073 bytes)
+I0926 12:18:23.644340   19968 ssh_runner.go:195] Run: sudo cp /etc/resolv.conf /etc/kubelet-resolv.conf
+I0926 12:18:23.655840   19968 ssh_runner.go:195] Run: sudo sed -i -e "s/^search .$//" /etc/kubelet-resolv.conf
+I0926 12:18:23.666341   19968 ssh_runner.go:195] Run: grep 172.31.238.249	control-plane.minikube.internal$ /etc/hosts
+I0926 12:18:23.668727   19968 ssh_runner.go:195] Run: /bin/bash -c "{ grep -v $'\tcontrol-plane.minikube.internal$' "/etc/hosts"; echo "172.31.238.249	control-plane.minikube.internal"; } > /tmp/h.$$; sudo cp /tmp/h.$$ "/etc/hosts""
+I0926 12:18:23.676841   19968 certs.go:54] Setting up C:\Users\user\.minikube\profiles\minikube for IP: 172.31.238.249
+I0926 12:18:23.684340   19968 certs.go:182] skipping minikubeCA CA generation: C:\Users\user\.minikube\ca.key
+I0926 12:18:23.691340   19968 certs.go:182] skipping proxyClientCA CA generation: C:\Users\user\.minikube\proxy-client-ca.key
+I0926 12:18:23.691841   19968 certs.go:302] generating minikube-user signed cert: C:\Users\user\.minikube\profiles\minikube\client.key
+I0926 12:18:23.692341   19968 crypto.go:68] Generating cert C:\Users\user\.minikube\profiles\minikube\client.crt with IP's: []
+I0926 12:18:23.852340   19968 crypto.go:156] Writing cert to C:\Users\user\.minikube\profiles\minikube\client.crt ...
+I0926 12:18:23.852841   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\client.crt: {Name:mk0680c065b3554efadcc6595bac227090e1920d Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:23.853341   19968 crypto.go:164] Writing key to C:\Users\user\.minikube\profiles\minikube\client.key ...
+I0926 12:18:23.853341   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\client.key: {Name:mk4ac1bbf8a6de97d3e1c0c9df669ec2bddf95f3 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:23.853841   19968 certs.go:302] generating minikube signed cert: C:\Users\user\.minikube\profiles\minikube\apiserver.key.a876ed06
+I0926 12:18:23.853841   19968 crypto.go:68] Generating cert C:\Users\user\.minikube\profiles\minikube\apiserver.crt.a876ed06 with IP's: [172.31.238.249 10.96.0.1 127.0.0.1 10.0.0.1]
+I0926 12:18:23.951340   19968 crypto.go:156] Writing cert to C:\Users\user\.minikube\profiles\minikube\apiserver.crt.a876ed06 ...
+I0926 12:18:23.951340   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\apiserver.crt.a876ed06: {Name:mk3965d6777fef5edecb8981a3a4f6905b1b70ea Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:23.951840   19968 crypto.go:164] Writing key to C:\Users\user\.minikube\profiles\minikube\apiserver.key.a876ed06 ...
+I0926 12:18:23.951840   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\apiserver.key.a876ed06: {Name:mk14b113a4ae0a57271044be6ca94a46172ec8a3 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:23.952341   19968 certs.go:320] copying C:\Users\user\.minikube\profiles\minikube\apiserver.crt.a876ed06 -> C:\Users\user\.minikube\profiles\minikube\apiserver.crt
+I0926 12:18:23.960841   19968 certs.go:324] copying C:\Users\user\.minikube\profiles\minikube\apiserver.key.a876ed06 -> C:\Users\user\.minikube\profiles\minikube\apiserver.key
+I0926 12:18:23.961341   19968 certs.go:302] generating aggregator signed cert: C:\Users\user\.minikube\profiles\minikube\proxy-client.key
+I0926 12:18:23.961341   19968 crypto.go:68] Generating cert C:\Users\user\.minikube\profiles\minikube\proxy-client.crt with IP's: []
+I0926 12:18:24.033870   19968 crypto.go:156] Writing cert to C:\Users\user\.minikube\profiles\minikube\proxy-client.crt ...
+I0926 12:18:24.033870   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\proxy-client.crt: {Name:mk200539a6a0695144ec612df6c156d7098533e4 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:24.034372   19968 crypto.go:164] Writing key to C:\Users\user\.minikube\profiles\minikube\proxy-client.key ...
+I0926 12:18:24.034372   19968 lock.go:35] WriteFile acquiring C:\Users\user\.minikube\profiles\minikube\proxy-client.key: {Name:mk9d85596795208b222d85d0a551532bb58b1dcb Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:24.039343   19968 certs.go:388] found cert: C:\Users\user\.minikube\certs\C:\Users\user\.minikube\certs\ca-key.pem (1675 bytes)
+I0926 12:18:24.039343   19968 certs.go:388] found cert: C:\Users\user\.minikube\certs\C:\Users\user\.minikube\certs\ca.pem (1070 bytes)
+I0926 12:18:24.039343   19968 certs.go:388] found cert: C:\Users\user\.minikube\certs\C:\Users\user\.minikube\certs\cert.pem (1115 bytes)
+I0926 12:18:24.039842   19968 certs.go:388] found cert: C:\Users\user\.minikube\certs\C:\Users\user\.minikube\certs\key.pem (1675 bytes)
+I0926 12:18:24.043341   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\profiles\minikube\apiserver.crt --> /var/lib/minikube/certs/apiserver.crt (1399 bytes)
+I0926 12:18:24.058342   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\profiles\minikube\apiserver.key --> /var/lib/minikube/certs/apiserver.key (1675 bytes)
+I0926 12:18:24.072512   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\profiles\minikube\proxy-client.crt --> /var/lib/minikube/certs/proxy-client.crt (1147 bytes)
+I0926 12:18:24.086840   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\profiles\minikube\proxy-client.key --> /var/lib/minikube/certs/proxy-client.key (1679 bytes)
+I0926 12:18:24.100840   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\ca.crt --> /var/lib/minikube/certs/ca.crt (1111 bytes)
+I0926 12:18:24.115341   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\ca.key --> /var/lib/minikube/certs/ca.key (1679 bytes)
+I0926 12:18:24.130656   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\proxy-client-ca.crt --> /var/lib/minikube/certs/proxy-client-ca.crt (1119 bytes)
+I0926 12:18:24.145074   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\proxy-client-ca.key --> /var/lib/minikube/certs/proxy-client-ca.key (1675 bytes)
+I0926 12:18:24.159850   19968 ssh_runner.go:362] scp C:\Users\user\.minikube\ca.crt --> /usr/share/ca-certificates/minikubeCA.pem (1111 bytes)
+I0926 12:18:24.174776   19968 ssh_runner.go:362] scp memory --> /var/lib/minikube/kubeconfig (738 bytes)
+I0926 12:18:24.190340   19968 ssh_runner.go:195] Run: openssl version
+I0926 12:18:24.199340   19968 ssh_runner.go:195] Run: sudo /bin/bash -c "test -s /usr/share/ca-certificates/minikubeCA.pem && ln -fs /usr/share/ca-certificates/minikubeCA.pem /etc/ssl/certs/minikubeCA.pem"
+I0926 12:18:24.210840   19968 ssh_runner.go:195] Run: ls -la /usr/share/ca-certificates/minikubeCA.pem
+I0926 12:18:24.213683   19968 certs.go:431] hashing: -rw-r--r-- 1 root root 1111 Sep 22 09:12 /usr/share/ca-certificates/minikubeCA.pem
+I0926 12:18:24.219340   19968 ssh_runner.go:195] Run: openssl x509 -hash -noout -in /usr/share/ca-certificates/minikubeCA.pem
+I0926 12:18:24.228341   19968 ssh_runner.go:195] Run: sudo /bin/bash -c "test -L /etc/ssl/certs/b5213941.0 || ln -fs /etc/ssl/certs/minikubeCA.pem /etc/ssl/certs/b5213941.0"
+I0926 12:18:24.235840   19968 kubeadm.go:396] StartCluster: {Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.27.0-amd64.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.34@sha256:f2a1e577e43fd6769f35cdb938f6d21c3dacfd763062d119cade738fa244720c Memory:4000 CPUs:2 DiskSize:20000 VMDriver: Driver:hyperv HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:0 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.25.0 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP:172.31.238.249 Port:8443 KubernetesVersion:v1.25.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:C:\Users\user:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath:}
+I0926 12:18:24.239340   19968 ssh_runner.go:195] Run: docker ps --filter status=paused --filter=name=k8s_.*_(kube-system)_ --format={{.ID}}
+I0926 12:18:24.259341   19968 ssh_runner.go:195] Run: sudo ls /var/lib/kubelet/kubeadm-flags.env /var/lib/kubelet/config.yaml /var/lib/minikube/etcd
+I0926 12:18:24.270840   19968 ssh_runner.go:195] Run: sudo cp /var/tmp/minikube/kubeadm.yaml.new /var/tmp/minikube/kubeadm.yaml
+I0926 12:18:24.282340   19968 ssh_runner.go:195] Run: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf
+I0926 12:18:24.288437   19968 kubeadm.go:152] config check failed, skipping stale config cleanup: sudo ls -la /etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf: Process exited with status 2
+stdout:
+
+stderr:
+ls: cannot access '/etc/kubernetes/admin.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/kubelet.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/controller-manager.conf': No such file or directory
+ls: cannot access '/etc/kubernetes/scheduler.conf': No such file or directory
+I0926 12:18:24.289385   19968 ssh_runner.go:286] Start: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.25.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,Mem"
+I0926 12:18:24.316342   19968 kubeadm.go:317] W0926 09:18:24.289661    1425 initconfiguration.go:119] Usage of CRI endpoints without URL scheme is deprecated and can cause kubelet errors in the future. Automatically prepending scheme "unix" to the "criSocket" with value "/var/run/cri-dockerd.sock". Please update your configuration!
+I0926 12:18:24.319438   19968 kubeadm.go:317] W0926 09:18:24.293434    1425 utils.go:69] The recommended value for "resolvConf" in "KubeletConfiguration" is: /run/systemd/resolve/resolv.conf; the provided value is: /etc/kubelet-resolv.conf
+I0926 12:18:24.397861   19968 kubeadm.go:317] 	[WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+I0926 12:18:38.298888   19968 kubeadm.go:317] [init] Using Kubernetes version: v1.25.0
+I0926 12:18:38.298888   19968 kubeadm.go:317] [preflight] Running pre-flight checks
+I0926 12:18:38.299310   19968 kubeadm.go:317] [preflight] Pulling images required for setting up a Kubernetes cluster
+I0926 12:18:38.299310   19968 kubeadm.go:317] [preflight] This might take a minute or two, depending on the speed of your internet connection
+I0926 12:18:38.299310   19968 kubeadm.go:317] [preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+I0926 12:18:38.299810   19968 kubeadm.go:317] [certs] Using certificateDir folder "/var/lib/minikube/certs"
+I0926 12:18:38.301309   19968 out.go:204]   - Generating certificates and keys ...
+I0926 12:18:38.301809   19968 kubeadm.go:317] [certs] Using existing ca certificate authority
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Using existing apiserver certificate and key on disk
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Generating "apiserver-kubelet-client" certificate and key
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Generating "front-proxy-ca" certificate and key
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Generating "front-proxy-client" certificate and key
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Generating "etcd/ca" certificate and key
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Generating "etcd/server" certificate and key
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] etcd/server serving cert is signed for DNS names [localhost minikube] and IPs [172.31.238.249 127.0.0.1 ::1]
+I0926 12:18:38.302309   19968 kubeadm.go:317] [certs] Generating "etcd/peer" certificate and key
+I0926 12:18:38.302810   19968 kubeadm.go:317] [certs] etcd/peer serving cert is signed for DNS names [localhost minikube] and IPs [172.31.238.249 127.0.0.1 ::1]
+I0926 12:18:38.302810   19968 kubeadm.go:317] [certs] Generating "etcd/healthcheck-client" certificate and key
+I0926 12:18:38.302810   19968 kubeadm.go:317] [certs] Generating "apiserver-etcd-client" certificate and key
+I0926 12:18:38.302810   19968 kubeadm.go:317] [certs] Generating "sa" key and public key
+I0926 12:18:38.303909   19968 kubeadm.go:317] [kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+I0926 12:18:38.303909   19968 kubeadm.go:317] [kubeconfig] Writing "admin.conf" kubeconfig file
+I0926 12:18:38.303909   19968 kubeadm.go:317] [kubeconfig] Writing "kubelet.conf" kubeconfig file
+I0926 12:18:38.303909   19968 kubeadm.go:317] [kubeconfig] Writing "controller-manager.conf" kubeconfig file
+I0926 12:18:38.303909   19968 kubeadm.go:317] [kubeconfig] Writing "scheduler.conf" kubeconfig file
+I0926 12:18:38.304312   19968 kubeadm.go:317] [kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+I0926 12:18:38.304312   19968 kubeadm.go:317] [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+I0926 12:18:38.304312   19968 kubeadm.go:317] [kubelet-start] Starting the kubelet
+I0926 12:18:38.304312   19968 kubeadm.go:317] [control-plane] Using manifest folder "/etc/kubernetes/manifests"
+I0926 12:18:38.305312   19968 out.go:204]   - Booting up control plane ...
+I0926 12:18:38.305811   19968 kubeadm.go:317] [control-plane] Creating static Pod manifest for "kube-apiserver"
+I0926 12:18:38.305811   19968 kubeadm.go:317] [control-plane] Creating static Pod manifest for "kube-controller-manager"
+I0926 12:18:38.305811   19968 kubeadm.go:317] [control-plane] Creating static Pod manifest for "kube-scheduler"
+I0926 12:18:38.305811   19968 kubeadm.go:317] [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+I0926 12:18:38.305811   19968 kubeadm.go:317] [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+I0926 12:18:38.305811   19968 kubeadm.go:317] [apiclient] All control plane components are healthy after 10.502804 seconds
+I0926 12:18:38.306310   19968 kubeadm.go:317] [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+I0926 12:18:38.306310   19968 kubeadm.go:317] [kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
+I0926 12:18:38.306310   19968 kubeadm.go:317] [upload-certs] Skipping phase. Please see --upload-certs
+I0926 12:18:38.306810   19968 kubeadm.go:317] [mark-control-plane] Marking the node minikube as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+I0926 12:18:38.306810   19968 kubeadm.go:317] [bootstrap-token] Using token: 12bm3j.8vxnfbj29bftfypy
+I0926 12:18:38.307309   19968 out.go:204]   - Configuring RBAC rules ...
+I0926 12:18:38.307810   19968 kubeadm.go:317] [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+I0926 12:18:38.307810   19968 kubeadm.go:317] [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
+I0926 12:18:38.307810   19968 kubeadm.go:317] [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+I0926 12:18:38.308309   19968 kubeadm.go:317] [bootstrap-token] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+I0926 12:18:38.308309   19968 kubeadm.go:317] [bootstrap-token] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+I0926 12:18:38.308309   19968 kubeadm.go:317] [bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+I0926 12:18:38.308814   19968 kubeadm.go:317] [kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+I0926 12:18:38.308814   19968 kubeadm.go:317] [addons] Applied essential addon: CoreDNS
+I0926 12:18:38.308814   19968 kubeadm.go:317] [addons] Applied essential addon: kube-proxy
+I0926 12:18:38.308814   19968 kubeadm.go:317] 
+I0926 12:18:38.308814   19968 kubeadm.go:317] Your Kubernetes control-plane has initialized successfully!
+I0926 12:18:38.308814   19968 kubeadm.go:317] 
+I0926 12:18:38.308814   19968 kubeadm.go:317] To start using your cluster, you need to run the following as a regular user:
+I0926 12:18:38.308814   19968 kubeadm.go:317] 
+I0926 12:18:38.308814   19968 kubeadm.go:317]   mkdir -p $HOME/.kube
+I0926 12:18:38.309309   19968 kubeadm.go:317]   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+I0926 12:18:38.309309   19968 kubeadm.go:317]   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+I0926 12:18:38.309309   19968 kubeadm.go:317] 
+I0926 12:18:38.309309   19968 kubeadm.go:317] Alternatively, if you are the root user, you can run:
+I0926 12:18:38.309309   19968 kubeadm.go:317] 
+I0926 12:18:38.309309   19968 kubeadm.go:317]   export KUBECONFIG=/etc/kubernetes/admin.conf
+I0926 12:18:38.309309   19968 kubeadm.go:317] 
+I0926 12:18:38.309309   19968 kubeadm.go:317] You should now deploy a pod network to the cluster.
+I0926 12:18:38.309309   19968 kubeadm.go:317] Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+I0926 12:18:38.309811   19968 kubeadm.go:317]   https://kubernetes.io/docs/concepts/cluster-administration/addons/
+I0926 12:18:38.309811   19968 kubeadm.go:317] 
+I0926 12:18:38.309811   19968 kubeadm.go:317] You can now join any number of control-plane nodes by copying certificate authorities
+I0926 12:18:38.309811   19968 kubeadm.go:317] and service account keys on each node and then running the following as root:
+I0926 12:18:38.309811   19968 kubeadm.go:317] 
+I0926 12:18:38.309811   19968 kubeadm.go:317]   kubeadm join control-plane.minikube.internal:8443 --token 12bm3j.8vxnfbj29bftfypy \
+I0926 12:18:38.310312   19968 kubeadm.go:317] 	--discovery-token-ca-cert-hash sha256:d73b8eb6dc21246612cada1c0a2b5903e3a4de01b24b8224c995a59bc05e13e5 \
+I0926 12:18:38.310312   19968 kubeadm.go:317] 	--control-plane 
+I0926 12:18:38.310312   19968 kubeadm.go:317] 
+I0926 12:18:38.310312   19968 kubeadm.go:317] Then you can join any number of worker nodes by running the following on each as root:
+I0926 12:18:38.310312   19968 kubeadm.go:317] 
+I0926 12:18:38.310312   19968 kubeadm.go:317] kubeadm join control-plane.minikube.internal:8443 --token 12bm3j.8vxnfbj29bftfypy \
+I0926 12:18:38.310815   19968 kubeadm.go:317] 	--discovery-token-ca-cert-hash sha256:d73b8eb6dc21246612cada1c0a2b5903e3a4de01b24b8224c995a59bc05e13e5 
+I0926 12:18:38.310815   19968 cni.go:95] Creating CNI manager for ""
+I0926 12:18:38.310815   19968 cni.go:169] CNI unnecessary in this configuration, recommending no CNI
+I0926 12:18:38.310815   19968 ssh_runner.go:195] Run: /bin/bash -c "cat /proc/$(pgrep kube-apiserver)/oom_adj"
+I0926 12:18:38.321810   19968 ssh_runner.go:195] Run: sudo /var/lib/minikube/binaries/v1.25.0/kubectl create clusterrolebinding minikube-rbac --clusterrole=cluster-admin --serviceaccount=kube-system:default --kubeconfig=/var/lib/minikube/kubeconfig
+I0926 12:18:38.321810   19968 ssh_runner.go:195] Run: sudo /var/lib/minikube/binaries/v1.25.0/kubectl label nodes minikube.k8s.io/version=v1.27.0 minikube.k8s.io/commit=4243041b7a72319b9be7842a7d34b6767bbdac2b minikube.k8s.io/name=minikube minikube.k8s.io/updated_at=2022_09_26T12_18_38_0700 minikube.k8s.io/primary=true --all --overwrite --kubeconfig=/var/lib/minikube/kubeconfig
+I0926 12:18:38.326810   19968 ops.go:34] apiserver oom_adj: -16
+I0926 12:18:38.417309   19968 kubeadm.go:1067] duration metric: took 105.4975ms to wait for elevateKubeSystemPrivileges.
+I0926 12:18:38.434329   19968 kubeadm.go:398] StartCluster complete in 14.1984894s
+I0926 12:18:38.434329   19968 settings.go:142] acquiring lock: {Name:mkeb1fd696d13c02454084a505541301abc7d400 Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:38.434809   19968 settings.go:150] Updating kubeconfig:  C:\Users\user\.kube\config
+I0926 12:18:38.435310   19968 lock.go:35] WriteFile acquiring C:\Users\user\.kube\config: {Name:mkf0568b8c360d314f1ebed2036702ffdf9396af Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0926 12:18:38.965809   19968 kapi.go:244] deployment "coredns" in namespace "kube-system" and context "minikube" rescaled to 1
+I0926 12:18:38.965809   19968 start.go:211] Will wait 6m0s for node &{Name: IP:172.31.238.249 Port:8443 KubernetesVersion:v1.25.0 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0926 12:18:38.966309   19968 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.25.0/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml"
+I0926 12:18:38.968310   19968 out.go:177] * Verifying Kubernetes components...
+I0926 12:18:38.967808   19968 config.go:180] Loaded profile config "minikube": Driver=hyperv, ContainerRuntime=docker, KubernetesVersion=v1.25.0
+I0926 12:18:38.968810   19968 addons.go:412] enableAddons start: toEnable=map[], additional=[]
+I0926 12:18:38.969309   19968 addons.go:65] Setting storage-provisioner=true in profile "minikube"
+I0926 12:18:38.969309   19968 addons.go:65] Setting default-storageclass=true in profile "minikube"
+I0926 12:18:38.969309   19968 addons_storage_classes.go:33] enableOrDisableStorageClasses default-storageclass=true on "minikube"
+I0926 12:18:38.969309   19968 addons.go:153] Setting addon storage-provisioner=true in "minikube"
+W0926 12:18:38.969309   19968 addons.go:162] addon storage-provisioner should already be in state true
+I0926 12:18:38.969809   19968 host.go:66] Checking if "minikube" exists ...
+I0926 12:18:38.969809   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:38.970309   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:38.977309   19968 ssh_runner.go:195] Run: sudo systemctl is-active --quiet service kubelet
+I0926 12:18:39.055311   19968 ssh_runner.go:195] Run: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.25.0/kubectl --kubeconfig=/var/lib/minikube/kubeconfig -n kube-system get configmap coredns -o yaml | sed '/^        forward . \/etc\/resolv.conf.*/i \        hosts {\n           172.31.224.1 host.minikube.internal\n           fallthrough\n        }' | sudo /var/lib/minikube/binaries/v1.25.0/kubectl --kubeconfig=/var/lib/minikube/kubeconfig replace -f -"
+I0926 12:18:39.056313   19968 api_server.go:51] waiting for apiserver process to appear ...
+I0926 12:18:39.066313   19968 ssh_runner.go:195] Run: sudo pgrep -xnf kube-apiserver.*minikube.*
+I0926 12:18:39.510309   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:39.510309   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:39.511309   19968 out.go:177]   - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+I0926 12:18:39.511810   19968 addons.go:345] installing /etc/kubernetes/addons/storage-provisioner.yaml
+I0926 12:18:39.511810   19968 ssh_runner.go:362] scp memory --> /etc/kubernetes/addons/storage-provisioner.yaml (2676 bytes)
+I0926 12:18:39.511810   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:39.515310   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:39.515310   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:39.520809   19968 addons.go:153] Setting addon default-storageclass=true in "minikube"
+W0926 12:18:39.520809   19968 addons.go:162] addon default-storageclass should already be in state true
+I0926 12:18:39.521309   19968 host.go:66] Checking if "minikube" exists ...
+I0926 12:18:39.521809   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:39.757958   19968 start.go:810] {"host.minikube.internal": 172.31.224.1} host record injected into CoreDNS
+I0926 12:18:39.757958   19968 api_server.go:71] duration metric: took 791.6487ms to wait for apiserver process to appear ...
+I0926 12:18:39.757958   19968 api_server.go:87] waiting for apiserver healthz status ...
+I0926 12:18:39.757958   19968 api_server.go:240] Checking apiserver healthz at https://172.31.238.249:8443/healthz ...
+I0926 12:18:39.763419   19968 api_server.go:266] https://172.31.238.249:8443/healthz returned 200:
+ok
+I0926 12:18:39.764811   19968 api_server.go:140] control plane version: v1.25.0
+I0926 12:18:39.764811   19968 api_server.go:130] duration metric: took 6.8533ms to wait for apiserver health ...
+I0926 12:18:39.764811   19968 system_pods.go:43] waiting for kube-system pods to appear ...
+I0926 12:18:39.771809   19968 system_pods.go:59] 4 kube-system pods found
+I0926 12:18:39.771809   19968 system_pods.go:61] "etcd-minikube" [30c02a4e-e26b-42af-b080-5500d389ace3] Pending
+I0926 12:18:39.771809   19968 system_pods.go:61] "kube-apiserver-minikube" [3d688fb4-69b9-4468-bf2a-cfdddac0e256] Pending
+I0926 12:18:39.771809   19968 system_pods.go:61] "kube-controller-manager-minikube" [33059c2f-c692-4bea-bd17-711e84aa1aaa] Pending
+I0926 12:18:39.771809   19968 system_pods.go:61] "kube-scheduler-minikube" [f47b5c9b-b7b4-451a-99f4-08132d7a3cac] Pending
+I0926 12:18:39.771809   19968 system_pods.go:74] duration metric: took 6.9978ms to wait for pod list to return data ...
+I0926 12:18:39.771809   19968 kubeadm.go:573] duration metric: took 805.4998ms to wait for : map[apiserver:true system_pods:true] ...
+I0926 12:18:39.771809   19968 node_conditions.go:102] verifying NodePressure condition ...
+I0926 12:18:39.774308   19968 node_conditions.go:122] node storage ephemeral capacity is 17784752Ki
+I0926 12:18:39.774308   19968 node_conditions.go:123] node cpu capacity is 2
+I0926 12:18:39.774808   19968 node_conditions.go:105] duration metric: took 2.9993ms to run NodePressure ...
+I0926 12:18:39.774808   19968 start.go:216] waiting for startup goroutines ...
+I0926 12:18:40.009308   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:40.009308   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:40.009308   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:40.009308   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:40.009308   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:40.009423   19968 addons.go:345] installing /etc/kubernetes/addons/storageclass.yaml
+I0926 12:18:40.009423   19968 ssh_runner.go:362] scp memory --> /etc/kubernetes/addons/storageclass.yaml (271 bytes)
+I0926 12:18:40.009423   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive ( Hyper-V\Get-VM minikube ).state
+I0926 12:18:40.450841   19968 main.go:134] libmachine: [stdout =====>] : Running
+
+I0926 12:18:40.450841   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:40.450841   19968 main.go:134] libmachine: [executing ==>] : C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive (( Hyper-V\Get-VM minikube ).networkadapters[0]).ipaddresses[0]
+I0926 12:18:40.622309   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:40.622309   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:40.622405   19968 sshutil.go:53] new ssh client: &{IP:172.31.238.249 Port:22 SSHKeyPath:C:\Users\user\.minikube\machines\minikube\id_rsa Username:docker}
+I0926 12:18:40.715309   19968 ssh_runner.go:195] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.25.0/kubectl apply -f /etc/kubernetes/addons/storage-provisioner.yaml
+I0926 12:18:41.006338   19968 main.go:134] libmachine: [stdout =====>] : 172.31.238.249
+
+I0926 12:18:41.006338   19968 main.go:134] libmachine: [stderr =====>] : 
+I0926 12:18:41.006338   19968 sshutil.go:53] new ssh client: &{IP:172.31.238.249 Port:22 SSHKeyPath:C:\Users\user\.minikube\machines\minikube\id_rsa Username:docker}
+I0926 12:18:41.099360   19968 ssh_runner.go:195] Run: sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.25.0/kubectl apply -f /etc/kubernetes/addons/storageclass.yaml
+I0926 12:18:41.221361   19968 out.go:177] * Enabled addons: storage-provisioner, default-storageclass
+I0926 12:18:41.222360   19968 addons.go:414] enableAddons completed in 2.256051s
+I0926 12:18:41.313861   19968 start.go:506] kubectl: 1.24.0, cluster: 1.25.0 (minor skew: 1)
+I0926 12:18:41.314862   19968 out.go:177] * Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+* 
+* ==> Docker <==
+* -- Journal begins at Mon 2022-09-26 19:32:08 UTC, ends at Tue 2022-09-27 13:43:35 UTC. --
+-- No entries --
+
+* 
+* ==> container status <==
+* time="2022-09-27T13:43:35Z" level=warning msg="runtime connect using default endpoints: [unix:///var/run/dockershim.sock unix:///run/containerd/containerd.sock unix:///run/crio/crio.sock]. As the default settings are now deprecated, you should set the endpoint instead."
+time="2022-09-27T13:43:37Z" level=error msg="connect endpoint 'unix:///var/run/dockershim.sock', make sure you are running as root and the endpoint has been started: context deadline exceeded"
+time="2022-09-27T13:43:39Z" level=error msg="connect endpoint 'unix:///run/containerd/containerd.sock', make sure you are running as root and the endpoint has been started: context deadline exceeded"
+time="2022-09-27T13:43:39Z" level=warning msg="image connect using default endpoints: [unix:///var/run/dockershim.sock unix:///run/containerd/containerd.sock unix:///run/crio/crio.sock]. As the default settings are now deprecated, you should set the endpoint instead."
+time="2022-09-27T13:43:41Z" level=error msg="connect endpoint 'unix:///var/run/dockershim.sock', make sure you are running as root and the endpoint has been started: context deadline exceeded"
+time="2022-09-27T13:43:43Z" level=error msg="connect endpoint 'unix:///run/containerd/containerd.sock', make sure you are running as root and the endpoint has been started: context deadline exceeded"
+CONTAINER           IMAGE               CREATED             STATE               NAME                ATTEMPT             POD ID
+
+* 
+* ==> describe nodes <==
+* 
+* ==> dmesg <==
+* [Sep27 07:03] You have booted with nomodeset. This means your GPU drivers are DISABLED
+[  +0.000001] Any video related functionality will be severely degraded, and you may not even be able to suspend the system properly
+[  +0.000000] Unless you actually understand what nomodeset does, you should reboot without enabling it
+[  +0.054770] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[  +0.005089] * Found PM-Timer Bug on the chipset. Due to workarounds for a bug,
+              * this clock source is slow. Consider trying other clock sources
+[  +2.491279] Unstable clock detected, switching default tracing clock to "global"
+              If you want to keep using the local clock, then add:
+                "trace_clock=local"
+              on the kernel command line
+[  +0.000042] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[  +0.524822] psmouse serio1: trackpoint: failed to get extended button data, assuming 3 buttons
+[  +0.383346] systemd-fstab-generator[113]: Ignoring "noauto" for root device
+[  +0.064036] systemd[1]: systemd-journald.service: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[  +0.000001] systemd[1]: (This warning is only shown for the first unit using IP firewalling.)
+[  +1.983838] NFSD: Using /var/lib/nfs/v4recovery as the NFSv4 state recovery directory
+[  +0.000003] NFSD: unable to find recovery directory /var/lib/nfs/v4recovery
+[  +0.000001] NFSD: Unable to initialize client recovery tracking! (-2)
+
+* 
+* ==> kernel <==
+*  13:43:43 up  6:39,  0 users,  load average: 0.00, 0.00, 0.00
+Linux minikube 5.10.57 #1 SMP Sat Sep 10 02:24:46 UTC 2022 x86_64 GNU/Linux
+PRETTY_NAME="Buildroot 2021.02.12"
+
+* 
+* ==> kubelet <==
+* -- Journal begins at Mon 2022-09-26 19:32:08 UTC, ends at Tue 2022-09-27 13:43:43 UTC. --
+-- No entries --
+

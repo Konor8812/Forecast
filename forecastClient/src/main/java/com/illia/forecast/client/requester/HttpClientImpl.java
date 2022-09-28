@@ -1,12 +1,8 @@
 package com.illia.forecast.client.requester;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.illia.forecast.core.model.WeatherForecast;
 import com.illia.forecast.core.requester.RequesterException;
-import lombok.RequiredArgsConstructor;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;

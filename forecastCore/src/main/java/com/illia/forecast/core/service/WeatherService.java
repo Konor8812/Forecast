@@ -6,7 +6,6 @@ import com.illia.forecast.core.model.WeatherForecast;
 import com.illia.forecast.core.parser.Parser;
 import com.illia.forecast.core.requester.WeatherForecastRequester;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service

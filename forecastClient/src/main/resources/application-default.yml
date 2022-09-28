@@ -1,2 +1,2 @@
 weather-forecast-client:
-  url: "http://localhost:8081/home/forecast"
+  url: "http://forecast-core:8081/home/forecast"

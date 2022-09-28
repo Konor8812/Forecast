@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: weather-forecast-config
+  namespace: default
+data:
+  SPRING_PROFILES_ACTIVE: prod
+  JAVA_TOOL_OPTIONS: -XX:MaxRAMPercentage=80

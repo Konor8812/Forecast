@@ -5,5 +5,5 @@ import com.illia.forecast.core.model.WeatherForecast;
 
 public interface Parser {
 
-    public WeatherForecast parse(String content);
+    WeatherForecast parse(String content);
 }

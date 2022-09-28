@@ -2,6 +2,7 @@ import com.illia.forecast.core.model.WeatherForecast;
 import com.illia.forecast.core.parser.Parser;
 import com.illia.forecast.core.parser.WeatherXMLParser;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.io.IOException;
 import java.net.URI;
@@ -21,9 +22,8 @@ public class ParserTest {
         Parser parser = new WeatherXMLParser();
         WeatherForecast forecast = parser.parse(weatherXML);
 
-        System.out.println(forecast.getForecastForTimePeriod(1));
+        Assertions.assertEquals(25, forecast.getWeatherList().size());
 
     }
 
-//Location{country='UA', city='Irpin', timeZone='10800', longitude='30.24', latitude='50.523', altitude='0'}
 }

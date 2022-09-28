@@ -2,17 +2,16 @@ package com.illia.forecast.core.controller;
 
 import com.illia.forecast.core.model.WeatherForecast;
 import com.illia.forecast.core.service.WeatherService;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
-import java.time.LocalDate;
+
 
 @RestController
-//@RequestMapping(path = "${app.rest.api.prefix}")
+
 @RequestMapping(path = "/home")
 public class MainController{
 
