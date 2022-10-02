@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="forecastCore" />
+        <module name="forecastBot" />
         <module name="forecastClient" />
       </profile>
     </annotationProcessing>

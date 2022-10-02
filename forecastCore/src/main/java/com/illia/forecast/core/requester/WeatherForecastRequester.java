@@ -1,6 +1,9 @@
 package com.illia.forecast.core.requester;
 
 
+import com.illia.forecast.core.model.WeatherForecast;
+import reactor.core.publisher.Mono;
+
 public interface WeatherForecastRequester {
-    String requestForecastAsXML(String url);
+    Mono<WeatherForecast> requestForecast(String url);
 }

@@ -11,6 +11,7 @@
     <modules>
         <module>forecastClient</module>
         <module>forecastCore</module>
+        <module>forecastBot</module>
     </modules>
 
     <properties>

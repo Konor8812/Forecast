@@ -18,9 +18,12 @@ public class HttpClientImpl implements HttpClient {
     @Override
     public Mono<String> performRequest(String url) {
         try {
-            WebClient client = WebClient.builder().baseUrl(url).build();
-            return client.get()
-                    .accept(MediaType.APPLICATION_JSON)
+
+            return WebClient.builder()
+                    .baseUrl(url)
+                    .build()
+                    .get()
+                    .accept(MediaType.ALL)
                     .retrieve()
                     .bodyToMono(String.class);
 

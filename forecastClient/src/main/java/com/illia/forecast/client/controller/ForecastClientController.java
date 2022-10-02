@@ -16,16 +16,14 @@ import reactor.core.publisher.Mono;
 @RequestMapping(path = "${client.baseUrl}")
 public class ForecastClientController {
 
-
     @Autowired
     WeatherForecastClientService weatherForecastClientService;
 
     @GetMapping("/getForecast/{numberOfDays}/{lat}/{lon}")
-    public Mono<String> getForecast(@PathVariable(name = "lat") Double latitude,
+    public Mono<WeatherForecast> getForecast(@PathVariable(name = "lat") Double latitude,
                                              @PathVariable(name = "lon")Double longitude,
                                              @PathVariable(name = "numberOfDays")Integer numberOfDays){
         System.out.println("forecast client controller called days: "+numberOfDays+ " lat " + latitude + " long " + longitude );
-        WeatherForecast forecast = weatherForecastClientService.getForecast(latitude, longitude).block();
-        return Mono.just(forecast.getForecastForTimePeriod(numberOfDays));
+        return weatherForecastClientService.getForecast(latitude, longitude);
     }
 }
