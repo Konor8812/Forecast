@@ -1,6 +1,7 @@
 package com.illia.forecast.client.requester;
 
 
+import com.illia.forecast.core.model.WeatherForecast;
 import com.illia.forecast.core.requester.RequesterException;
 
 import lombok.extern.slf4j.Slf4j;
@@ -14,18 +15,16 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class HttpClientImpl implements HttpClient {
 
-
     @Override
-    public Mono<String> performRequest(String url) {
+    public Mono<WeatherForecast> performRequest(String url) {
         try {
-
             return WebClient.builder()
                     .baseUrl(url)
                     .build()
                     .get()
                     .accept(MediaType.ALL)
                     .retrieve()
-                    .bodyToMono(String.class);
+                    .bodyToMono(WeatherForecast.class);
 
         } catch (Exception ex) {
             log.error("request error, url:{}", url, ex);

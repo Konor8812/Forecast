@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "update_id": 470726192,
+      "message": {
+        "message_id": 2,
+        "from": {
+          "id": 340992170,
+          "is_bot": false,
+          "first_name": "Illia",
+          "last_name": "Buzevych",
+          "username": "Illia881",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 340992170,
+          "first_name": "Illia",
+          "last_name": "Buzevych",
+          "username": "Illia881",
+          "type": "private"
+        },
+        "date": 1664729595,
+        "text": "rrr"
+      }
+    },
+    {
+      "update_id": 470726193,
+      "message": {
+        "message_id": 4,
+        "from": {
+          "id": 407780230,
+          "is_bot": false,
+          "first_name": "\u041b\u0451\u0448\u0430",
+          "username": "Traks13",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 407780230,
+          "first_name": "\u041b\u0451\u0448\u0430",
+          "username": "Traks13",
+          "type": "private"
+        },
+        "date": 1664729810,
+        "text": "/start",
+        "entities": [
+          {
+            "offset": 0,
+            "length": 6,
+            "type": "bot_command"
+          }
+        ]
+      }
+    },
+    {
+      "update_id": 470726194,
+      "message": {
+        "message_id": 5,
+        "from": {
+          "id": 407780230,
+          "is_bot": false,
+          "first_name": "\u041b\u0451\u0448\u0430",
+          "username": "Traks13",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 407780230,
+          "first_name": "\u041b\u0451\u0448\u0430",
+          "username": "Traks13",
+          "type": "private"
+        },
+        "date": 1664729824,
+        "text": "\u041f\u0440\u0438\u0432\u0435\u0442,\u044f \u0414\u043e\u0440\u0430,\u0430 \u0442\u044b?"
+      }
+    }
+  ]
+}

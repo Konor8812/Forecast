@@ -11,6 +11,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class ParserTest {
 
     @Test
@@ -18,11 +20,17 @@ public class ParserTest {
 
         URI uri = ClassLoader.getSystemResource("xmlResponse.xml").toURI();
         String weatherXML = Files.readString(Paths.get(uri), Charset.forName("Windows-1251"));
-
         Parser parser = new WeatherXMLParser();
+
         WeatherForecast forecast = parser.parse(weatherXML);
 
-        Assertions.assertEquals(25, forecast.getWeatherList().size());
+        assertNotNull(forecast.getLocation().getCity());
+        assertNotNull(forecast.getLocation().getLatitude());
+
+        assertNotNull(forecast.getSunSetTime());
+        assertNotNull(forecast.getForecastForTimePeriod(1));
+
+        Assertions.assertEquals(40, forecast.getWeatherList().size());
 
     }
 

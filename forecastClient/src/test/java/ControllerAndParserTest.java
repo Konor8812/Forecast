@@ -1,16 +1,10 @@
-import com.illia.forecast.client.config.ApplicationConfiguration;
-import com.illia.forecast.client.requester.ForecastRequester;
+import com.illia.forecast.client.requester.WeatherForecastRequester;
 import com.illia.forecast.core.parser.WeatherXMLParser;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
 
@@ -32,7 +26,7 @@ public class ControllerAndParserTest {
     @Autowired
     WebTestClient webTestClient;
 
-    ForecastRequester requester = Mockito.mock(ForecastRequester.class);
+    WeatherForecastRequester requester = Mockito.mock(WeatherForecastRequester.class);
 
     @Test
     @Ignore

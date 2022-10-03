@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
 
 @Component
 @Slf4j
-public class XMLForecastRequester implements WeatherForecastRequester{
+public class ForecastRequester implements WeatherForecastRequester{
 
     @Override
     public Mono<WeatherForecast> requestForecast(String url) {

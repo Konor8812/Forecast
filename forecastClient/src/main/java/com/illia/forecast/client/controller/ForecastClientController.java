@@ -19,11 +19,20 @@ public class ForecastClientController {
     @Autowired
     WeatherForecastClientService weatherForecastClientService;
 
-    @GetMapping("/getForecast/{numberOfDays}/{lat}/{lon}")
+    @GetMapping("v1/getForecast/{numberOfDays}/{lat}/{lon}")
     public Mono<WeatherForecast> getForecast(@PathVariable(name = "lat") Double latitude,
                                              @PathVariable(name = "lon")Double longitude,
                                              @PathVariable(name = "numberOfDays")Integer numberOfDays){
         System.out.println("forecast client controller called days: "+numberOfDays+ " lat " + latitude + " long " + longitude );
         return weatherForecastClientService.getForecast(latitude, longitude);
+    }
+
+    @GetMapping("/getForecast/{numberOfDays}/{lat}/{lon}")
+    public Mono<String> getFormattedForecast(@PathVariable(name = "lat") Double latitude,
+                                             @PathVariable(name = "lon")Double longitude,
+                                             @PathVariable(name = "numberOfDays")Integer numberOfDays) {
+        System.out.println("forecast client controller called for output days: " + numberOfDays + " lat " + latitude + " long " + longitude);
+        
+        return weatherForecastClientService.getForecastForOutput(latitude, longitude, numberOfDays);
     }
 }

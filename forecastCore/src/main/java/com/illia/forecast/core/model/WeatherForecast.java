@@ -54,6 +54,6 @@ public class WeatherForecast {
                     .append(weather.getPressure()).append(" hPa\n\n");
         }
 
-        return sb.toString();
+        return sb.toString().replaceAll("\n", System.lineSeparator());
     }
 }

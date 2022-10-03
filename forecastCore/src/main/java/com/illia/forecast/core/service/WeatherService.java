@@ -17,8 +17,6 @@ public class WeatherService {
     @Autowired
     private WeatherForecastRequester forecastRequester;
 
-    @Autowired
-    private Parser parser;
 
     public Mono<WeatherForecast> getWeather(double latitude, double longitude){
 

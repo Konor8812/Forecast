@@ -1,22 +1,36 @@
 package com.illia.client;
 
-import org.springframework.http.MediaType;
-import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+@Service
+@Slf4j
 public class HttpClientImpl implements HttpClient{
 
-
     @Override
-    public Mono<String> performRequest(String url, String params) {
+    public String performRequest(String url) {
 
+        var request = HttpRequest.newBuilder().uri(URI.create(url)).header("Content-Type", "application/json").build();
+        return doRequest(request);
+    }
 
-        WebClient webclient = WebClient.builder().baseUrl(url).build();
-        Mono<String> result = webclient.get()
-                .accept(MediaType.APPLICATION_JSON)
-                .retrieve()
-                .bodyToMono(String.class);
-
-        return result;
+    private String doRequest(HttpRequest request){
+        try{
+            java.net.http.HttpClient client = java.net.http.HttpClient.newHttpClient();
+            var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            return response.body();
+        } catch (IOException | InterruptedException e) {
+            log.error("send http request error :{} ", request.uri());
+            if (e instanceof InterruptedException) {
+                Thread.currentThread().interrupt();
+            }
+            throw new HttpClientException(e.getMessage());
+        }
     }
 }

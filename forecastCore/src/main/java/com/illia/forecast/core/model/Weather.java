@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Weather {
+    private String time;
     private String generalState;
     private String precipitationProbability;
     private String windSpeed;
@@ -17,7 +18,6 @@ public class Weather {
     private String temperatureFeelsLike;
     private String pressure;
     private String humidity;
-    private String time;
 
     @Override
     public String toString() {
