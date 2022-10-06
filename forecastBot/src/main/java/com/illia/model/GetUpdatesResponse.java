@@ -45,30 +45,16 @@ public class GetUpdatesResponse {
         }
     }
 
-    @Value
-    @AllArgsConstructor
-    public static class Response{
-        long updateId;
-        Message message;
-
-        @JsonCreator
-        public Response(@JsonProperty("update_id") long updateId, @JsonProperty("message") Message message, @JsonProperty("edited_message") Message editedMessage) {
-            this.updateId = updateId;
-            this.message = message != null ? message : editedMessage;
-        }
-
-    }
-
     //sender
     @Value
     public static class From{
+
         long id;
         boolean isBot;
         String firstName;
         String lastName;
         String userName;
         String languageCode;
-
         @JsonCreator
         public From(@JsonProperty("id") long id,
                     @JsonProperty("is_bot") boolean isBot,
@@ -83,16 +69,16 @@ public class GetUpdatesResponse {
             this.userName = userName;
             this.languageCode = languageCode;
         }
-    }
 
+    }
     @Value
     public static class Message{
+
         long id;
         From from;
         Chat chat;
         long date;
         String text;
-
         @JsonCreator
         public Message(@JsonProperty("message_id") long id,
                        @JsonProperty("from") From from,
@@ -105,5 +91,47 @@ public class GetUpdatesResponse {
             this.date = date;
             this.text = text;
         }
+
+
     }
+    @Value
+    @AllArgsConstructor
+    public static class Response{
+        long updateId;
+        Message message;
+
+        @JsonCreator
+        public Response(@JsonProperty("update_id") long updateId, @JsonProperty("message") Message message, @JsonProperty("edited_message") Message editedMessage) {
+            this.updateId = updateId;
+            this.message = message != null ? message : editedMessage;
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "GetUpdatesResponse{" +
+                "isStatusOk=" + isStatusOk +
+                ", responses=" + responses +
+                '}';
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

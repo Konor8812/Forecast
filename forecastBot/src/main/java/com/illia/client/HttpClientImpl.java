@@ -14,9 +14,12 @@ import java.net.http.HttpResponse;
 public class HttpClientImpl implements HttpClient{
 
     @Override
-    public String performRequest(String url) {
-
-        var request = HttpRequest.newBuilder().uri(URI.create(url)).header("Content-Type", "application/json").build();
+    public String performRequest(String url, String params) {
+        var request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(params))
+                .build();
         return doRequest(request);
     }
 

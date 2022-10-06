@@ -1,6 +1,8 @@
 package com.illia.client;
 
 
+import reactor.core.publisher.Mono;
+
 public interface ForecastClient {
-    String getForecast(String url, int numberOfDays, double latitude, double longitude);
+    Mono<String> getForecast(String url, int numberOfDays);
 }

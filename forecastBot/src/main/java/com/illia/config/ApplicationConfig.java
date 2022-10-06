@@ -42,7 +42,6 @@ public class ApplicationConfig {
         if (token == null) {
             log.error("telegram token not found");
         }
-        System.out.println("token == " + token);
         return new TelegramClientConfig(token, url, refreshRateMs);
     }
 
@@ -58,7 +57,7 @@ public class ApplicationConfig {
     @Bean
     public TelegramScheduler telegramScheduler(TelegramClient client,
                                                TelegramClientConfig config,
-                                               @Qualifier("generalMessageProcessor") MessageTextProcessor generalTextProcessor,
+                                               @Qualifier("generalMessageTextProcessor") MessageTextProcessor generalTextProcessor,
                                                LastUpdateIdKeeper lastUpdateIdKeeper){
         TelegramService service = new TelegramServiceImpl(client, generalTextProcessor, lastUpdateIdKeeper);
         return new TelegramScheduler(service, config);

@@ -26,6 +26,9 @@ public class TelegramClientImpl implements TelegramClient {
     HttpClient client;
 
     @Autowired
+    HttpClient forecastClient;
+
+    @Autowired
     LastUpdateIdKeeper lastUpdateIdKeeper;
 
     @Autowired
@@ -33,25 +36,29 @@ public class TelegramClientImpl implements TelegramClient {
 
     @Override
     public GetUpdatesResponse getUpdates(GetUpdatesRequest request) {
-        long offset = lastUpdateIdKeeper.getUpdateId();
+        try {
+            String params = objectMapper.writeValueAsString(request);
+            String url = createUrl("/getUpdates?");
 
-        String urlWithParams = String.format("%s%s%s%s", tconf.getUrl(), tconf.getToken(), "/getUpdates?offset=", request.getOffset());
-
-
-        var result = client.performRequest(urlWithParams).map(this::parse);
-
-        result.block().getResponses().forEach(System.out::println);
-//        var temp = mapper.readValue(result, GetUpdatesResponse.class);
-//
-//        lastUpdateId = lastUpdateId == 0 ? offset : lastUpdateId + 1;
-//        lastUpdateIdKeeper.set(lastUpdateId);
-
-        return null;
+            var result = client.performRequest(url, params);
+            return this.parse(result);
+        } catch (Exception e) {
+            log.error("Exception while getting updates", e);
+            e.printStackTrace();
+            throw new GetUpdateException(e.getMessage());
+        }
     }
 
     @Override
     public void sendMessage(SendMessageRequest request) {
-
+        try {
+            String url = createUrl("/sendMessage?");
+            String params = objectMapper.writeValueAsString(request);
+//            String params = String.format("%s%s%s%s%s%s", "/sendMessage?chat_id=", request.getChatId(), "&text=", request.getText(), "&reply_to_message_id=", request.getReplyToMessageId());
+            client.performRequest(url, params);
+        } catch (Exception e) {
+            log.error("Exception while sending message ", e);
+        }
     }
 
     private GetUpdatesResponse parse(String valuesToParse) {
@@ -61,5 +68,9 @@ public class TelegramClientImpl implements TelegramClient {
             log.error("Unable to parse string " + valuesToParse, e);
             throw new GetUpdateException(e.getMessage());
         }
+    }
+
+    private String createUrl(String requestMethod) {
+        return String.format("%s%s%s", tconf.getUrl(), tconf.getToken(), requestMethod);
     }
 }
