@@ -8,7 +8,34 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>forecastBot</artifactId>
   <build>
+    <finalName>forecast-bot</finalName>
     <plugins>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <configuration>
+          <from>
+            <image>bellsoft/liberica-openjdk-alpine:latest</image>
+          </from>
+          <to>
+            <auth>
+              <username>${git.lab.username}</username>
+              <password>${git.lab.password}</password>
+            </auth>
+            <image>registry.gitlab.com/admirai/forecast/forecast-bot</image>
+            <tags>
+              <tag>latest</tag>
+            </tags>
+          </to>
+          <container>
+            <mainClass>com.illia.ForecastBot</mainClass>
+            <ports>
+              <port>8085</port>
+            </ports>
+            <creationTime />
+          </container>
+        </configuration>
+      </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.2.2</version>
@@ -43,9 +70,6 @@
                 <exclude>META-INF/*.DSA</exclude>
                 <exclude>META-INF/*.RSA</exclude>
               </excludes>
-              <includes>
-                <include>TOKEN_FILE.txt</include>
-              </includes>
             </filter>
           </filters>
         </configuration>

@@ -7,6 +7,7 @@ import com.illia.service.TelegramService;
 import com.illia.service.TelegramServiceImpl;
 import com.illia.service.processor.MessageTextProcessor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -30,29 +31,30 @@ import java.util.concurrent.TimeUnit;
 @EnableConfigurationProperties(WeatherForecastConfig.class)
 public class ApplicationConfig {
 
-    private static final String TOKEN_FILE_LOCATION = "TOKEN_FILE.txt";
+    @Autowired
+    TelegramClientConfig config;
 
-    @Bean("telegramClientConfig")
-    public TelegramClientConfig telegramClientConfig(@Value("${app.telegram.url}") String url,
-                                                     @Value("${app.telegram.refreshRate.millis}") long refreshRateMs) {
-        String token = System.getProperty("telegramToken");
-        if (token == null) {
-            token = readFile(TOKEN_FILE_LOCATION);
-        }
-        if (token == null) {
-            log.error("telegram token not found");
-        }
-        return new TelegramClientConfig(token, url, refreshRateMs);
-    }
+//    @Bean("telegramClientConfig")
+//    public TelegramClientConfig telegramClientConfig(@Value("${app.telegram.url}") String url,
+//                                                     @Value("${app.telegram.refreshRate.millis}") long refreshRateMs) {
+//        String token = System.getProperty("telegramToken");
+//        if (token == null) {
+//            token = readFile(TOKEN_FILE_LOCATION);
+//        }
+//        if (token == null) {
+//            log.error("telegram token not found");
+//        }
+//        return new TelegramClientConfig(token, url, refreshRateMs);
+//    }
 
-    private String readFile(String tokenFileLocation) {
-        try {
-            return Files.readString(Paths.get(tokenFileLocation));
-        } catch (IOException e) {
-            log.error("can't read telegram token in :{}", TOKEN_FILE_LOCATION);
-            return null;
-        }
-    }
+//    private String readFile(String tokenFileLocation) {
+//        try {
+//            return Files.readString(Paths.get(tokenFileLocation));
+//        } catch (IOException e) {
+//            log.error("can't read telegram token in :{}", TOKEN_FILE_LOCATION);
+//            return null;
+//        }
+//    }
 
     @Bean
     public TelegramScheduler telegramScheduler(TelegramClient client,

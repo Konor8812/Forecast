@@ -24,6 +24,9 @@ public class ParserTest {
 
         WeatherForecast forecast = parser.parse(weatherXML);
 
+       System.out.println(forecast.getForecastForTimePeriod(1));
+
+
         assertNotNull(forecast.getLocation().getCity());
         assertNotNull(forecast.getLocation().getLatitude());
 

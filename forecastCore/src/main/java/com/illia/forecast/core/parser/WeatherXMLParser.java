@@ -12,6 +12,8 @@ import org.xml.sax.InputSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.StringReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Component
 @Slf4j
@@ -37,8 +39,14 @@ public class WeatherXMLParser implements Parser {
                         .longitude(coordinatesNamedNodeMap.getNamedItem("longitude").getTextContent()).build();
 
                 NamedNodeMap sunInfo = document.getElementsByTagName("sun").item(0).getAttributes();
-                String sunRiseTime = sunInfo.getNamedItem("rise").getTextContent();
-                String sunSetTime = sunInfo.getNamedItem("set").getTextContent();
+                Pattern sunTimePattern = Pattern.compile("(\\d\\d:\\d\\d:\\d\\d)");
+
+                Matcher sunRiseTimeMatcher = sunTimePattern.matcher(sunInfo.getNamedItem("rise").getTextContent());
+                Matcher sunSetTimeMatcher = sunTimePattern.matcher(sunInfo.getNamedItem("set").getTextContent());
+                sunRiseTimeMatcher.find();
+                sunSetTimeMatcher.find();
+                String sunRiseTime = sunRiseTimeMatcher.group(0);
+                String sunSetTime = sunSetTimeMatcher.group(0);
 
                 result.setLocation(location);
                 result.setSunRiseTime(sunRiseTime);
@@ -52,7 +60,7 @@ public class WeatherXMLParser implements Parser {
                             .append(timeNodes.getNamedItem("from").getTextContent())
                             .append(" to ")
                             .append(timeNodes.getNamedItem("to").getTextContent()).append(":");
-                    String time = timeBuilder.toString().replaceAll("T", " ");
+                    String time = timeBuilder.toString();
                     Element element = (Element) nodes.item(i);
 
                     NamedNodeMap temperatureElement = element.getElementsByTagName("temperature").item(0).getAttributes();
@@ -66,9 +74,9 @@ public class WeatherXMLParser implements Parser {
                             .humidity(element.getElementsByTagName("humidity").item(0).getAttributes().getNamedItem("value").getTextContent())
                             .pressure(element.getElementsByTagName("pressure").item(0).getAttributes().getNamedItem("value").getTextContent())
                             .temperature(Double.toString(Math.floor(temperature)))
-                            .temperatureFeelsLike(Double.toString(Math.floor(temperatureFeelsLike)))
+                            .temperatureFeelsLike(Double.toString(Math.round(temperatureFeelsLike)))
                             .windSpeed(element.getElementsByTagName("windSpeed").item(0).getAttributes().getNamedItem("mps").getTextContent())
-                            .time(time)
+                            .time(time.replaceAll("T", " "))
                             .build();
 
                     result.addWeatherForecast(weather);

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: forecast-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: forecast-bot
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: forecast-bot
+    spec:
+      containers:
+        - image: registry.gitlab.com/admirai/forecast/forecast-bot:latest
+          ports:
+            - containerPort: 8085
+          envFrom:
+            - configMapRef:
+                name: weather-forecast-config
+            - secretRef:
+                name: forecast-bot-secret
+          name: forecast-bot
+      imagePullSecrets:
+        - name: regcred

@@ -9,9 +9,9 @@ import reactor.core.publisher.Mono;
 public class MessageTextProcessorStart implements MessageTextProcessor {
 
     private final static String START_COMMAND_REPLY = "To get forecast enter either full " +
-            "LAT LON NOD - forecast for location for NOD days (5 at most)" +
+            "LAT LON NOD - forecast for location for NOD days (2 at most)" +
             "or short" +
-            "NOD - return forecast for Irpin for NOD days";
+            "NOD - return forecast for Irpin', UA for NOD days";
 
     @Override
     public Mono<MessageTextProcessorReply> process(String messageText) {
