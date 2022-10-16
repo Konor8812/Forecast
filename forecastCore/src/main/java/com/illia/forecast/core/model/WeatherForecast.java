@@ -4,9 +4,12 @@ import lombok.Data;
 
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.regex.Pattern;
 
 @Data
@@ -49,7 +52,7 @@ public class WeatherForecast {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append("Weather forecast for ").append(location.toString()).append(" on ").append(LocalDateTime.now().format(DATE_TIME_FORMATTER)).append("\n")
+        sb.append("Weather forecast for ").append(location.toString()).append(" on ").append(ZonedDateTime.now().format(DATE_TIME_FORMATTER)).append("\n")
                 .append("Sun rises at ").append(sunRiseTime).append("\nSets down at ").append(sunSetTime).append("\n\n");
         for (int i = 0; i < days * 8; i++) {
             Weather weather = weatherList.get(i);
@@ -62,7 +65,6 @@ public class WeatherForecast {
                     .append("%\nWind speed: ").append(weather.getWindSpeed()).append(" mps (")
                     .append(DECIMAL_FORMAT.format(Double.parseDouble(weather.getWindSpeed()) * 3.6)).append(" km/h)\n\n");
         }
-
         return sb.toString().replaceAll("\n", System.lineSeparator());
     }
 

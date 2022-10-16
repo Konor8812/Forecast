@@ -32,7 +32,6 @@ public class ForecastClientController {
                                              @PathVariable(name = "lon")Double longitude,
                                              @PathVariable(name = "numberOfDays")Integer numberOfDays) {
         System.out.println("forecast client controller called for output days: " + numberOfDays + " lat " + latitude + " long " + longitude);
-        
         return weatherForecastClientService.getForecastForOutput(latitude, longitude, numberOfDays);
     }
 }

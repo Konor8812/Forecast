@@ -14,8 +14,7 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <timestamp>${maven.build.timestamp}</timestamp>
-        <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+
     </properties>
 
     <dependencies>
@@ -28,6 +27,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -86,18 +91,19 @@
                         </tags>
                     </to>
                     <container>
+                        <creationTime>
+                            ${timestamp}
+                        </creationTime>
                         <mainClass>com.illia.ForecastCore</mainClass>
                         <ports>
                             <port>8081</port>
                         </ports>
-                        <creationTime></creationTime>
                     </container>
                 </configuration>
             </plugin>
 
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -110,7 +116,6 @@
             </plugin>
             <plugin>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.3.0</version>
                 <configuration>
                     <filters>
                         <filter>

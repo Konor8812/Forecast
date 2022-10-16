@@ -2,7 +2,6 @@ package com.illia.forecast.client.requester;
 
 
 import com.illia.forecast.core.model.WeatherForecast;
-import com.illia.forecast.core.requester.RequesterException;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -15,12 +14,13 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class HttpClientImpl implements HttpClient {
 
+    private final WebClient.Builder webBuilder = WebClient.builder();
+
     @Override
     public Mono<WeatherForecast> performRequest(String url) {
+        var client = webBuilder.baseUrl(url).build();
         try {
-            return WebClient.builder()
-                    .baseUrl(url)
-                    .build()
+            return client
                     .get()
                     .accept(MediaType.ALL)
                     .retrieve()
@@ -28,7 +28,7 @@ public class HttpClientImpl implements HttpClient {
 
         } catch (Exception ex) {
             log.error("request error, url:{}", url, ex);
-            throw new RequesterException(ex);
+            throw new ForecastClientException(ex);
         }
 
     }

@@ -20,18 +20,6 @@ public class Location {
     public Location(){
 
     }
-    public String getLocationAsString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(city).append(", ").append(country).append(", timezone: ").append(timeZone);
-        return sb.toString();
-    }
-
-    public String getGeographicalCoordinatesAsString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("Coordinates: latitude = ").append(latitude).append(", longitude = ").append(longitude).append(", altitude = ").append(altitude);
-        return sb.toString();
-
-    }
 
     @Override
     public String toString() {

@@ -25,6 +25,29 @@
       }
     },
     {
+      "update_id": 470726195,
+      "message": {
+        "message_id": 3,
+        "from": {
+          "id": 340992170,
+          "is_bot": false,
+          "first_name": "Illia",
+          "last_name": "Buzevych",
+          "username": "Illia881",
+          "language_code": "en"
+        },
+        "chat": {
+          "id": 340992170,
+          "first_name": "Illia",
+          "last_name": "Buzevych",
+          "username": "Illia881",
+          "type": "private"
+        },
+        "date": 1664729595,
+        "text": "2"
+      }
+    },
+    {
       "update_id": 470726193,
       "message": {
         "message_id": 4,
