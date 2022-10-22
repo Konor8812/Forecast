@@ -27,8 +27,8 @@ public class ForecastMessageTextProcessor implements MessageTextProcessor{
         int numberOfDays = 0;
         Matcher matcher;
         if((matcher = MessageTextPatterns.FULL.getPattern().matcher(messageText)).matches()){
-            numberOfDays = Integer.parseInt(matcher.group(5));
-            url = String.format("%s/%s/%s/%s", config.getUrl(), numberOfDays, matcher.group(1), matcher.group(3));
+            numberOfDays = Integer.parseInt(matcher.group(7));
+            url = String.format("%s/%s/%s/%s", config.getUrl(), numberOfDays, matcher.group(1), matcher.group(4));
 
         }else if((matcher = MessageTextPatterns.SHORT.getPattern().matcher(messageText)).matches()){
             numberOfDays = Integer.parseInt(matcher.group(1));

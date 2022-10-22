@@ -23,6 +23,13 @@ public class Location {
 
     @Override
     public String toString() {
+
+        if(city.isEmpty() || country.isEmpty()){
+            return "Undefined";
+        }
+
         return city + ", " + country;
     }
+
+
 }

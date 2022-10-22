@@ -2,7 +2,7 @@ package com.illia.forecast.client.service;
 
 
 import com.illia.forecast.client.config.ForecastClientConfig;
-import com.illia.forecast.client.requester.WeatherForecastClient;
+import com.illia.forecast.client.requester.HttpClient;
 
 import com.illia.forecast.core.model.WeatherForecast;
 import lombok.AllArgsConstructor;
@@ -16,19 +16,19 @@ import reactor.core.publisher.Mono;
 public class WeatherForecastClientService {
 
     private final ForecastClientConfig config;
-    private final WeatherForecastClient requester;
+    private final HttpClient client;
 
 
     public Mono<WeatherForecast> getForecast(Double lat, Double lon){
         String urlWithParams = String.format("%s/%f/%f", config.getUrl(), lat, lon);
         log.info("url to go :{}", urlWithParams);
-        return requester.getForecast(urlWithParams);
+        return client.getForecast(urlWithParams);
     }
 
     public Mono<String> getForecastForOutput(Double lat, Double lon, int numOfDaysToShow){
         String urlWithParams = String.format("%s/%f/%f", config.getUrl(), lat, lon);
         log.info("url to go :{}", urlWithParams);
-        return requester.getForecast(urlWithParams).map(wf -> wf.getForecastForTimePeriod(numOfDaysToShow));
+        return client.getForecast(urlWithParams).map(wf -> wf.getForecastForTimePeriod(numOfDaysToShow));
     }
 
 }

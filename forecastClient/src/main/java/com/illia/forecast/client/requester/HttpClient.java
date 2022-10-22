@@ -5,5 +5,5 @@ import com.illia.forecast.core.model.WeatherForecast;
 import reactor.core.publisher.Mono;
 
 public interface HttpClient {
-    Mono<WeatherForecast> performRequest(String url);
+    Mono<WeatherForecast> getForecast(String url);
 }

@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  */
 
 public enum MessageTextPatterns {
-    FULL(Pattern.compile("(\\d+(\\.\\d+)?) (\\d+(\\.\\d+)?) (\\d)")),
+    FULL(Pattern.compile("((-)?\\d+(\\.\\d+)?) ((-)?\\d+(\\.\\d+)?) (\\d)")),
     SHORT(Pattern.compile("(\\d)"));
 
     private final Pattern pattern;

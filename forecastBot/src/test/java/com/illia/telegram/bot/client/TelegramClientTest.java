@@ -12,7 +12,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class TelegramClientTest {
 
-
     @MockBean
     TelegramClientConfig tconf;
     @MockBean

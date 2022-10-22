@@ -15,6 +15,9 @@ import java.util.regex.Pattern;
 @Data
 public class WeatherForecast {
 
+    private boolean okStatus;
+    private String errorMessage;
+
     private Location location;
     private String sunRiseTime;
     private String sunSetTime;
@@ -44,7 +47,17 @@ public class WeatherForecast {
                 '}';
     }
 
+    public WeatherForecast(String errorMessage) {
+        this.errorMessage = errorMessage;
+        okStatus = false;
+    }
+
     public String getForecastForTimePeriod(int days) {
+
+        if(!okStatus){
+            return errorMessage;
+        }
+
         if (days > 5) {
             days = 5;
         } else if (days <= 0) {

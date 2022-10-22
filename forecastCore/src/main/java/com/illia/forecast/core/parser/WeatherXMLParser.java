@@ -21,6 +21,11 @@ public class WeatherXMLParser implements Parser {
 
     @Override
     public WeatherForecast parse(String content) {
+
+        if(content.equals("Service currently is unavailable") || content.equals("Enter valid data to proceed: latitude and longitude should be in -180...180")){
+            return new WeatherForecast(content);
+        }
+
         WeatherForecast result = new WeatherForecast();
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -69,7 +74,8 @@ public class WeatherXMLParser implements Parser {
                     double temperature = (min + max) / 2 - 273.15;
                     double temperatureFeelsLike = Double.parseDouble(element.getElementsByTagName("feels_like").item(0).getAttributes().getNamedItem("value").getTextContent()) - 273.15;
 
-                    Weather weather = Weather.builder().generalState(element.getElementsByTagName("symbol").item(0).getAttributes().getNamedItem("name").getTextContent())
+                    Weather weather = Weather.builder()
+                            .generalState(element.getElementsByTagName("symbol").item(0).getAttributes().getNamedItem("name").getTextContent())
                             .precipitationProbability(element.getElementsByTagName("precipitation").item(0).getAttributes().getNamedItem("probability").getTextContent())
                             .humidity(element.getElementsByTagName("humidity").item(0).getAttributes().getNamedItem("value").getTextContent())
                             .pressure(element.getElementsByTagName("pressure").item(0).getAttributes().getNamedItem("value").getTextContent())
@@ -81,6 +87,7 @@ public class WeatherXMLParser implements Parser {
 
                     result.addWeatherForecast(weather);
                 }
+                result.setOkStatus(true);
                 return result;
             }
 
