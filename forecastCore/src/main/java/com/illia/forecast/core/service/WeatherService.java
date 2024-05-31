@@ -2,26 +2,39 @@ package com.illia.forecast.core.service;
 
 
 import com.illia.forecast.core.config.WeatherForecastConfig;
+import com.illia.forecast.core.model.ForecastExplanation;
 import com.illia.forecast.core.model.WeatherForecast;
-import com.illia.forecast.core.parser.Parser;
-import com.illia.forecast.core.requester.WeatherForecastRequester;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.illia.forecast.core.requester.openweather.WeatherForecastRequester;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class WeatherService {
 
-    @Autowired
-    private WeatherForecastConfig weatherForecastConfig;
-    @Autowired
-    private WeatherForecastRequester forecastRequester;
+  private final WeatherForecastConfig weatherForecastConfig;
+  private final WeatherForecastRequester forecastRequester;
+  private final OpenAIService openAIService;
 
+  public Mono<ForecastExplanation> getWeather(double latitude, double longitude) {
 
-    public Mono<WeatherForecast> getWeather(double latitude, double longitude){
+    var weatherForecast = getWeatherForecast(latitude, longitude);
+    return weatherForecast.flatMap(openAIService::getForecastExplanation);
+  }
 
-        String urlWithParams = String.format("%s?lat=%f&lon=%f&appid=%s&mode=%s", weatherForecastConfig.getBaseUrl(), latitude, longitude, weatherForecastConfig.getAppid(), weatherForecastConfig.getMode());
+  private Mono<WeatherForecast> getWeatherForecast(double latitude, double longitude) {
+    var url = getOpenWeatherMapUrl(latitude, longitude);
+    return forecastRequester.requestForecast(url);
+  }
 
-        return forecastRequester.requestForecast(urlWithParams);
-    }
+  private String getOpenWeatherMapUrl(double latitude, double longitude) {
+    return String.format("%s?lat=%f&lon=%f&appid=%s&mode=%s",
+        weatherForecastConfig.getBaseUrl(),
+        latitude,
+        longitude,
+        weatherForecastConfig.getAppid(),
+        weatherForecastConfig.getMode());
+  }
+
 }

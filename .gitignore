@@ -1,3 +1,7 @@
 TOKEN_FILE.txt
 kuber/config/secret_forecast-bot.yaml
 kuber/nginx/useful_utils.txt
+
+.idea
+
+**/target/**

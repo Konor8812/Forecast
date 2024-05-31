@@ -1,12 +1,17 @@
 package com.illia.forecast.core.config;
 
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import lombok.Getter;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 
-@Data
-@ConfigurationProperties(prefix = "weather")
+@Configuration
+@Getter
 public class WeatherForecastConfig {
-    private String baseUrl;
-    private String appid;
-    private String mode;
+
+  @Value("${weather.baseUrl}")
+  private String baseUrl;
+  @Value("${weather.appid}")
+  private String appid;
+  @Value("${weather.mode}")
+  private String mode;
 }

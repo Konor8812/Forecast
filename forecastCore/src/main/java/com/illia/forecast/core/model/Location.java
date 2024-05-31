@@ -3,33 +3,24 @@ package com.illia.forecast.core.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class Location {
 
-    private String country;
-    private String city;
-    private String timeZone;
+  private String country;
+  private String city;
 
-    private String longitude;
-    private String latitude;
-    private String altitude;
+  @Override
+  public String toString() {
 
-    public Location(){
-
+    if (city.isEmpty() || country.isEmpty()) {
+      return "Undefined";
     }
-
-    @Override
-    public String toString() {
-
-        if(city.isEmpty() || country.isEmpty()){
-            return "Undefined";
-        }
-
-        return city + ", " + country;
-    }
-
+    return city + ", " + country;
+  }
 
 }

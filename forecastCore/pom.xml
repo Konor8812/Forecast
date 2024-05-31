@@ -1,143 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>project-forecast</artifactId>
-        <groupId>com.illia</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>project-forecast</artifactId>
+    <groupId>com.illia</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>forecastCore</artifactId>
+  <artifactId>forecastCore</artifactId>
 
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+  <properties>
+    <!--        <maven.compiler.source>11</maven.compiler.source>-->
+    <!--        <maven.compiler.target>11</maven.compiler.target>-->
 
-    </properties>
+  </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+  <!--    <dependencies>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.springframework.boot</groupId>-->
+  <!--            <artifactId>spring-boot</artifactId>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.springframework.boot</groupId>-->
+  <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+  <!--            <scope>test</scope>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.springframework.boot</groupId>-->
+  <!--            <artifactId>spring-boot-test</artifactId>-->
+  <!--            <scope>test</scope>-->
+  <!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-        </dependency>
-    </dependencies>
+  <!--        <dependency>-->
+  <!--            <groupId>org.springframework.boot</groupId>-->
+  <!--            <artifactId>spring-boot-starter-webflux</artifactId>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.springframework.boot</groupId>-->
+  <!--            <artifactId>spring-boot-autoconfigure</artifactId>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.projectlombok</groupId>-->
+  <!--            <artifactId>lombok</artifactId>-->
+  <!--            <scope>provided</scope>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>log4j</groupId>-->
+  <!--            <artifactId>log4j</artifactId>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>junit</groupId>-->
+  <!--            <artifactId>junit</artifactId>-->
+  <!--            <scope>test</scope>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.slf4j</groupId>-->
+  <!--            <artifactId>slf4j-api</artifactId>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.mockito</groupId>-->
+  <!--            <artifactId>mockito-all</artifactId>-->
+  <!--            <scope>test</scope>-->
+  <!--        </dependency>-->
+  <!--        <dependency>-->
+  <!--            <groupId>org.springframework.boot</groupId>-->
+  <!--            <artifactId>spring-boot-configuration-processor</artifactId>-->
+  <!--        </dependency>-->
+  <!--    </dependencies>-->
 
-    <build>
-        <finalName>forecast-core</finalName>
-        <plugins>
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>jib-maven-plugin</artifactId>
-                <configuration>
-                    <from>
-                        <image>bellsoft/liberica-openjdk-alpine:latest</image>
-                    </from>
-                    <to>
-                        <auth>
-                            <username>${git.lab.username}</username>
-                            <password>${git.lab.password}</password>
-                        </auth>
-                        <image>registry.gitlab.com/admirai/forecast/forecast-core</image>
-                        <tags>
-                            <tag>latest</tag>
-                        </tags>
-                    </to>
-                    <container>
-                        <creationTime>
-                            ${timestamp}
-                        </creationTime>
-                        <mainClass>com.illia.ForecastCore</mainClass>
-                        <ports>
-                            <port>8081</port>
-                        </ports>
-                    </container>
-                </configuration>
-            </plugin>
+  <build>
+    <finalName>forecast-core</finalName>
+    <plugins>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <configuration>
+          <from>
+            <image>bellsoft/liberica-openjdk-alpine:latest</image>
+          </from>
+          <to>
+            <auth>
+              <username>${git.lab.username}</username>
+              <password>${git.lab.password}</password>
+            </auth>
+            <image>registry.gitlab.com/admirai/forecast/forecast-core</image>
+            <tags>
+              <tag>latest</tag>
+            </tags>
+          </to>
+          <container>
+            <creationTime>
+              ${timestamp}
+            </creationTime>
+            <mainClass>com.illia.ForecastCore</mainClass>
+            <ports>
+              <port>8081</port>
+            </ports>
+          </container>
+        </configuration>
+      </plugin>
 
-            <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib</classpathPrefix>
-                            <mainClass>com.illia.ForecastCore</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-shade-plugin</artifactId>
-                <configuration>
-                    <filters>
-                        <filter>
-                            <artifact>*:*</artifact>
-                            <excludes>
-                                <exclude>module-info.class</exclude>
-                                <exclude>META-INF/*.SF</exclude>
-                                <exclude>META-INF/*.DSA</exclude>
-                                <exclude>META-INF/*.RSA</exclude>
-                            </excludes>
-                        </filter>
-                    </filters>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib</classpathPrefix>
+              <mainClass>com.illia.ForecastCore</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <configuration>
+          <filters>
+            <filter>
+              <artifact>*:*</artifact>
+              <excludes>
+                <exclude>module-info.class</exclude>
+                <exclude>META-INF/*.SF</exclude>
+                <exclude>META-INF/*.DSA</exclude>
+                <exclude>META-INF/*.RSA</exclude>
+              </excludes>
+            </filter>
+          </filters>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

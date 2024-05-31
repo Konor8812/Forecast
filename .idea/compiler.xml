@@ -17,4 +17,11 @@
       <module name="forecast" target="11" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="forecastBot" options="-parameters" />
+      <module name="forecastClient" options="-parameters" />
+      <module name="forecastCore" options="-parameters" />
+    </option>
+  </component>
 </project>

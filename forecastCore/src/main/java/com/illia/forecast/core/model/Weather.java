@@ -10,25 +10,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Weather {
-    private String time;
-    private String generalState;
-    private String precipitationProbability;
-    private String windSpeed;
-    private String temperature;
-    private String temperatureFeelsLike;
-    private String pressure;
-    private String humidity;
 
-    @Override
-    public String toString() {
-        return "Weather{" +
-                "generalState='" + generalState + '\'' +
-                ", precipitationProbability='" + precipitationProbability + '\'' +
-                ", windSpeed='" + windSpeed + '\'' +
-                ", temperature='" + temperature + '\'' +
-                ", temperatureFeelsLike='" + temperatureFeelsLike + '\'' +
-                ", pressure='" + pressure + '\'' +
-                ", humidity='" + humidity + '\'' +
-                '}';
-    }
+  private String time;
+  private String generalState;
+  private String precipitationProbability;
+  private String temperatureFeelsLike;
+
+  @Override
+  public String toString() {
+    return new StringBuilder()
+        .append("time: ").append(time)
+        .append("| general state: ").append(generalState)
+        .append("| precipitationProbability: ").append(precipitationProbability)
+        .append("| temperature feels like: ").append(temperatureFeelsLike).toString();
+  }
 }

@@ -3,7 +3,7 @@ package com.illia.forecast.core.controller;
 import com.illia.forecast.core.model.WeatherForecast;
 import com.illia.forecast.core.parser.Parser;
 import com.illia.forecast.core.parser.WeatherXMLParser;
-import com.illia.forecast.core.requester.ForecastRequester;
+import com.illia.forecast.core.requester.openweather.ForecastRequester;
 import com.illia.forecast.core.service.WeatherService;
 
 import org.junit.jupiter.api.Test;
@@ -25,7 +25,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class MainControllerTest {
+class CoreControllerTest {
 
     @Autowired
     private WeatherService service;
@@ -38,6 +38,7 @@ class MainControllerTest {
 
         URI uri = ClassLoader.getSystemResource("xmlResponse.xml").toURI();
         String weatherXML = Files.readString(Paths.get(uri), Charset.forName("Windows-1251"));
+
         Parser parser = new WeatherXMLParser();
 
         WeatherForecast forecast = parser.parse(weatherXML);
