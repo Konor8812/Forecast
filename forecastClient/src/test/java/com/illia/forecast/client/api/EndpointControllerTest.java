@@ -1,4 +1,4 @@
-package com.illia.forecast.client.controller;
+package com.illia.forecast.client.api;
 
 import com.illia.ForecastClient;
 import com.illia.forecast.core.model.WeatherForecast;

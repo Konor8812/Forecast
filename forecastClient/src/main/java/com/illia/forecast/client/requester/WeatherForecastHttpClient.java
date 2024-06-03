@@ -13,14 +13,14 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class WeatherForecastHttpClient implements HttpClient {
 
-  private final WebClient.Builder webBuilder = WebClient.builder();
+  private final WebClient webBuilder;
 
   @Override
   public Mono<ForecastExplanation> getForecast(String url) {
-    var client = webBuilder.baseUrl(url).build();
     try {
-      return client
+      return webBuilder
           .get()
+              .uri(url)
           .accept(MediaType.ALL)
           .retrieve()
           .bodyToMono(ForecastExplanation.class);

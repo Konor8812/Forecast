@@ -1,2 +1,2 @@
 forecast-core:
-  url: "http://forecast-core.default.svc.cluster.local/forecast"
+  url: "http://forecast-core.default.svc.cluster.local/api/v1/forecast"

@@ -1,2 +1,2 @@
 forecast-core:
-  url: "http://localhost:8081/forecast"
+  url: "http://localhost:8081/api/v1/forecast"

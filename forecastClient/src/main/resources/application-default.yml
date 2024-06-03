@@ -1,2 +1,2 @@
 forecast-core:
-  url: "http://forecast-core:8081/forecast"
+  url: "http://forecast-core:8081/api/v1/forecast"

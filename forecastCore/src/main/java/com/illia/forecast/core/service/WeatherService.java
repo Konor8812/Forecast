@@ -17,9 +17,9 @@ public class WeatherService {
   private final WeatherForecastRequester forecastRequester;
   private final OpenAIService openAIService;
 
-  public Mono<ForecastExplanation> getWeather(double latitude, double longitude) {
+  public Mono<ForecastExplanation> getWeather(short daysAmount, double latitude, double longitude) {
 
-    var weatherForecast = getWeatherForecast(latitude, longitude);
+    var weatherForecast = getWeatherForecast(latitude, longitude).map(wf -> wf.getForecastForNDays(daysAmount));
     return weatherForecast.flatMap(openAIService::getForecastExplanation);
   }
 
