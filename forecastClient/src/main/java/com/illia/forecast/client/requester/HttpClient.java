@@ -1,9 +1,10 @@
 package com.illia.forecast.client.requester;
 
 
-import com.illia.forecast.core.model.WeatherForecast;
+import com.illia.forecast.client.model.ForecastExplanation;
 import reactor.core.publisher.Mono;
 
 public interface HttpClient {
-    Mono<WeatherForecast> getForecast(String url);
+
+  Mono<ForecastExplanation> getForecast(String url);
 }

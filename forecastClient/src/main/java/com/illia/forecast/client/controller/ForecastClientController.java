@@ -1,10 +1,10 @@
 package com.illia.forecast.client.controller;
 
 
+import com.illia.forecast.client.model.ForecastExplanation;
 import com.illia.forecast.client.service.WeatherForecastClientService;
-import com.illia.forecast.core.model.WeatherForecast;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,25 +13,15 @@ import reactor.core.publisher.Mono;
 
 
 @RestController
-@RequestMapping(path = "${client.baseUrl}")
+@RequiredArgsConstructor
 public class ForecastClientController {
 
-    @Autowired
-    WeatherForecastClientService weatherForecastClientService;
+  private final WeatherForecastClientService weatherForecastClientService;
 
-    @GetMapping("v1/getForecast/{numberOfDays}/{lat}/{lon}")
-    public Mono<WeatherForecast> getForecast(@PathVariable(name = "lat") Double latitude,
-                                             @PathVariable(name = "lon")Double longitude,
-                                             @PathVariable(name = "numberOfDays")Integer numberOfDays){
-        System.out.println("forecast client controller called days: "+numberOfDays+ " lat " + latitude + " long " + longitude );
-        return weatherForecastClientService.getForecast(latitude, longitude);
-    }
-
-    @GetMapping("/getForecast/{numberOfDays}/{lat}/{lon}")
-    public Mono<String> getFormattedForecast(@PathVariable(name = "lat") Double latitude,
-                                             @PathVariable(name = "lon")Double longitude,
-                                             @PathVariable(name = "numberOfDays")Integer numberOfDays) {
-        System.out.println("forecast client controller called for output days: " + numberOfDays + " lat " + latitude + " long " + longitude);
-        return weatherForecastClientService.getForecastForOutput(latitude, longitude, numberOfDays);
-    }
+  @GetMapping("getForecast/{numberOfDays}/{lat}/{lon}")
+  public Mono<ForecastExplanation> getForecast(@PathVariable(name = "lat") Double latitude,
+      @PathVariable(name = "lon") Double longitude,
+      @PathVariable(name = "numberOfDays") Short numberOfDays) {
+    return weatherForecastClientService.getForecast(numberOfDays, latitude, longitude);
+  }
 }

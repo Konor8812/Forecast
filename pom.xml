@@ -37,8 +37,8 @@
   </properties>
 
 
-  <!--  <dependencyManagement>-->
-  <dependencies>
+<!--    <dependencyManagement>-->
+<!--  <dependencies>-->
     <!--      <dependency>-->
     <!--        <groupId>org.springframework.boot</groupId>-->
     <!--        <artifactId>spring-boot</artifactId>-->
@@ -89,37 +89,27 @@
     <!--        <artifactId>spring-boot-configuration-processor</artifactId>-->
     <!--      </dependency>-->
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-webflux</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-cache</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.30</version>
-      <scope>provided</scope>
-    </dependency>
-    <!--    <dependency>-->
-    <!--      <groupId>com.github.corese4rch</groupId>-->
-    <!--      <artifactId>cvurl-io</artifactId>-->
-    <!--      <version>1.5.1</version>-->
-    <!--    </dependency>-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.retry</groupId>
-      <artifactId>spring-retry</artifactId>
-    </dependency>
-  </dependencies>
-  <!--  </dependencyManagement>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-webflux</artifactId>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.projectlombok</groupId>-->
+<!--      <artifactId>lombok</artifactId>-->
+<!--      <version>1.18.30</version>-->
+<!--      <scope>provided</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.boot</groupId>-->
+<!--      <artifactId>spring-boot-starter-test</artifactId>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.retry</groupId>-->
+<!--      <artifactId>spring-retry</artifactId>-->
+<!--    </dependency>-->
+<!--  </dependencies>-->
+<!--    </dependencyManagement>-->
 
 
   <!--    <dependency>-->

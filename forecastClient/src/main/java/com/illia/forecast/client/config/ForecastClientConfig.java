@@ -1,11 +1,12 @@
 package com.illia.forecast.client.config;
 
 
-import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import lombok.Getter;
+import org.springframework.beans.factory.annotation.Value;
 
-@Data
-@ConfigurationProperties(prefix = "weather-forecast-client")
+@Getter
 public class ForecastClientConfig {
-    String url;
+
+  @Value("${forecast-core.url}")
+  private String url;
 }

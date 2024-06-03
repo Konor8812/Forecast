@@ -2,33 +2,21 @@ package com.illia.forecast.client.service;
 
 
 import com.illia.forecast.client.config.ForecastClientConfig;
+import com.illia.forecast.client.model.ForecastExplanation;
 import com.illia.forecast.client.requester.HttpClient;
-
-import com.illia.forecast.core.model.WeatherForecast;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
-@Slf4j
 @Service
 @AllArgsConstructor
 public class WeatherForecastClientService {
 
-    private final ForecastClientConfig config;
-    private final HttpClient client;
+  private final ForecastClientConfig config;
+  private final HttpClient client;
 
-
-    public Mono<WeatherForecast> getForecast(Double lat, Double lon){
-        String urlWithParams = String.format("%s/%f/%f", config.getUrl(), lat, lon);
-        log.info("url to go :{}", urlWithParams);
-        return client.getForecast(urlWithParams);
-    }
-
-    public Mono<String> getForecastForOutput(Double lat, Double lon, int numOfDaysToShow){
-        String urlWithParams = String.format("%s/%f/%f", config.getUrl(), lat, lon);
-        log.info("url to go :{}", urlWithParams);
-        return client.getForecast(urlWithParams).map(wf -> wf.getForecastForTimePeriod(numOfDaysToShow));
-    }
-
+  public Mono<ForecastExplanation> getForecast(Short numberOfDays, Double lat, Double lon) {
+    String urlWithParams = String.format("%s?number_of_days=%d&lat=%f&lon=%d", config.getUrl(),numberOfDays, lat, lon);
+    return client.getForecast(urlWithParams);
+  }
 }
