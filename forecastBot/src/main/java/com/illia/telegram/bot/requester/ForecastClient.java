@@ -1,5 +1,4 @@
-package com.illia.telegram.bot.client;
-
+package com.illia.telegram.bot.requester;
 
 import reactor.core.publisher.Mono;
 

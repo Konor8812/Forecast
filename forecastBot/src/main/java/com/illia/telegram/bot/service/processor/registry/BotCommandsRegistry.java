@@ -1,4 +1,4 @@
-package com.illia.telegram.bot.service.processor;
+package com.illia.telegram.bot.service.processor.registry;
 
 /**
  *  Contains enumeration for all possible commands format /<command>
@@ -12,8 +12,8 @@ public enum BotCommandsRegistry {
     private final String processorName;
 
     BotCommandsRegistry(String command, String processorName){
-    this.command = command;
-    this.processorName = processorName;
+        this.command = command;
+        this.processorName = processorName;
     }
 
     public String getCommand() {

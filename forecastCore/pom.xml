@@ -19,7 +19,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
 
     <dependency>
@@ -34,59 +34,6 @@
     </dependency>
   </dependencies>
 
-
-  <!--    <dependencies>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.springframework.boot</groupId>-->
-  <!--            <artifactId>spring-boot</artifactId>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.springframework.boot</groupId>-->
-  <!--            <artifactId>spring-boot-starter-test</artifactId>-->
-  <!--            <scope>test</scope>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.springframework.boot</groupId>-->
-  <!--            <artifactId>spring-boot-test</artifactId>-->
-  <!--            <scope>test</scope>-->
-  <!--        </dependency>-->
-
-  <!--        <dependency>-->
-  <!--            <groupId>org.springframework.boot</groupId>-->
-  <!--            <artifactId>spring-boot-starter-webflux</artifactId>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.springframework.boot</groupId>-->
-  <!--            <artifactId>spring-boot-autoconfigure</artifactId>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.projectlombok</groupId>-->
-  <!--            <artifactId>lombok</artifactId>-->
-  <!--            <scope>provided</scope>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>log4j</groupId>-->
-  <!--            <artifactId>log4j</artifactId>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>junit</groupId>-->
-  <!--            <artifactId>junit</artifactId>-->
-  <!--            <scope>test</scope>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.slf4j</groupId>-->
-  <!--            <artifactId>slf4j-api</artifactId>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.mockito</groupId>-->
-  <!--            <artifactId>mockito-all</artifactId>-->
-  <!--            <scope>test</scope>-->
-  <!--        </dependency>-->
-  <!--        <dependency>-->
-  <!--            <groupId>org.springframework.boot</groupId>-->
-  <!--            <artifactId>spring-boot-configuration-processor</artifactId>-->
-  <!--        </dependency>-->
-  <!--    </dependencies>-->
 
   <build>
     <finalName>forecast-core</finalName>

@@ -16,7 +16,6 @@ public class GetUpdatesResponse {
     boolean isStatusOk;
     List<Response> responses;
 
-
     @JsonCreator
     public GetUpdatesResponse(@JsonProperty("ok")boolean isStatusOk, @JsonProperty("result") List<Response> responses) {
         this.isStatusOk = isStatusOk;

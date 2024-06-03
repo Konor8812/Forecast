@@ -1,4 +1,4 @@
-package com.illia.telegram.bot.client;
+package com.illia.telegram.bot.requester;
 
 import com.illia.telegram.bot.config.WeatherForecastConfig;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 @Service("forecastClientImpl")
-public class ForecastClientImpl implements ForecastClient{
+public class ForecastClientImpl implements ForecastClient {
 
     @Autowired
     WeatherForecastConfig config;

@@ -1,9 +1,11 @@
 package com.illia.telegram.bot.service.processor;
 
 
-import com.illia.telegram.bot.client.ForecastClient;
 import com.illia.telegram.bot.config.WeatherForecastConfig;
 import com.illia.telegram.bot.model.MessageTextProcessorReply;
+import com.illia.telegram.bot.requester.ForecastClient;
+import com.illia.telegram.bot.service.processor.pattern.MessageTextPatterns;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -12,14 +14,12 @@ import reactor.core.publisher.Mono;
 import java.util.regex.Matcher;
 
 @Component("forecastMessageTextProcessor")
-@Service
+@RequiredArgsConstructor
 public class ForecastMessageTextProcessor implements MessageTextProcessor{
 
-    @Autowired
-    ForecastClient client;
+    private final ForecastClient client;
 
-    @Autowired
-    WeatherForecastConfig config;
+    private final WeatherForecastConfig config;
 
     @Override
     public Mono<MessageTextProcessorReply> process(String messageText) {

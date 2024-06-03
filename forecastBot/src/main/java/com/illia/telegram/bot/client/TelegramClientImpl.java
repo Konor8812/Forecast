@@ -1,72 +1,46 @@
 package com.illia.telegram.bot.client;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.illia.telegram.bot.config.TelegramClientConfig;
 import com.illia.telegram.bot.model.GetUpdatesRequest;
 import com.illia.telegram.bot.model.GetUpdatesResponse;
 import com.illia.telegram.bot.model.SendMessageRequest;
-import com.illia.telegram.bot.service.LastUpdateIdKeeper;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 
 @Component
-@Slf4j
+@RequiredArgsConstructor
 public class TelegramClientImpl implements TelegramClient {
 
-    @Autowired
-    TelegramClientConfig tconf;
+    private final TelegramClientConfig telegramClientConfig;
 
-    @Autowired
-    HttpClient client;
+    private final WebClient webClient;
 
-    @Autowired
-    HttpClient forecastClient;
-
-    @Autowired
-    LastUpdateIdKeeper lastUpdateIdKeeper;
-
-    @Autowired
-    ObjectMapper objectMapper;
 
     @Override
-    public GetUpdatesResponse getUpdates(GetUpdatesRequest request) {
-        try {
-            String params = objectMapper.writeValueAsString(request);
-            String url = createUrl("/getUpdates?");
+    public Mono<GetUpdatesResponse> getUpdates(GetUpdatesRequest request) {
+        var url = createRequestUrl(telegramClientConfig.getGetUpdatesOperationUrl());
 
-            var result = client.performRequest(url, params);
-            return this.parse(result);
-        } catch (Exception e) {
-            log.error("Exception while getting updates", e);
-            e.printStackTrace();
-            throw new GetUpdateException(e.getMessage());
-        }
+        return webClient.get()
+                .uri(url)
+                .retrieve()
+                .bodyToMono(GetUpdatesResponse.class);
     }
 
     @Override
     public void sendMessage(SendMessageRequest request) {
-        try {
-            String url = createUrl("/sendMessage?");
-            String params = objectMapper.writeValueAsString(request);
-            client.performRequest(url, params);
-        } catch (Exception e) {
-            log.error("Exception while sending message ", e);
-        }
+        var url = createRequestUrl(telegramClientConfig.getGetUpdatesOperationUrl());
+
+        webClient.post()
+                .uri(url)
+                .bodyValue(request)
+                .retrieve();
     }
 
-    private GetUpdatesResponse parse(String valuesToParse) {
-        try {
-            return objectMapper.readValue(valuesToParse, GetUpdatesResponse.class);
-        } catch (JsonProcessingException e) {
-            log.error("Unable to parse string " + valuesToParse, e);
-            throw new GetUpdateException(e.getMessage());
-        }
-    }
-
-    private String createUrl(String requestMethod) {
-        return String.format("%s%s%s", tconf.getUrl(), tconf.getToken(), requestMethod);
+    private String createRequestUrl(String operationUrl) {
+        return String.format("%s%s%s", telegramClientConfig.getUrl(), telegramClientConfig.getToken(), operationUrl);
     }
 }

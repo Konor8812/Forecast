@@ -2,8 +2,8 @@ package com.illia.telegram.bot.service;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.illia.telegram.bot.client.ForecastClientImpl;
-import com.illia.telegram.bot.config.ApplicationConfig;
+import com.illia.telegram.bot.requester.ForecastClientImpl;
+import com.illia.telegram.bot.config.TelegramPollingScheduler;
 import com.illia.telegram.bot.config.TelegramClientConfig;
 import com.illia.telegram.bot.model.GetUpdatesResponse;
 import com.illia.telegram.bot.service.processor.ForecastMessageTextProcessor;
@@ -28,7 +28,7 @@ public class MessageTextProcessorTest {
     @Autowired
     ObjectMapper mapper;
     @MockBean
-    ApplicationConfig appConfig;
+    TelegramPollingScheduler appConfig;
     @MockBean
     TelegramClientConfig tconf;
 
