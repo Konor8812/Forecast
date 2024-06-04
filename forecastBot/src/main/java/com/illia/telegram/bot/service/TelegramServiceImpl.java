@@ -35,7 +35,7 @@ public class TelegramServiceImpl implements TelegramService {
 
     private long proceedResponse(GetUpdatesResponse response) {
         var responses = response.getResponses();
-        long lastUpdateId = 0l;
+        long lastUpdateId = 0L;
         for (var resp : responses) {
             lastUpdateId = Math.max(lastUpdateId, resp.getUpdateId());
             processMessage(resp.getMessage());
@@ -52,6 +52,7 @@ public class TelegramServiceImpl implements TelegramService {
                 .doOnNext(reply -> {
                     var result = reply.failureReply() == null ? reply.successReply() : reply.failureReply();
                     var sendMessageRequest = new SendMessageRequest(chatId, result, messageIdToReply);
+                  System.out.println(sendMessageRequest);
                     client.sendMessage(sendMessageRequest);
                 }).subscribe();
     }
