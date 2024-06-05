@@ -1,7 +1,9 @@
 package com.illia.telegram.bot.requester;
 
+import com.illia.telegram.bot.model.ForecastExplanation;
 import reactor.core.publisher.Mono;
 
 public interface ForecastClient {
-    Mono<String> getForecast(String url, int numberOfDays);
+
+  Mono<ForecastExplanation> getForecast(String url);
 }

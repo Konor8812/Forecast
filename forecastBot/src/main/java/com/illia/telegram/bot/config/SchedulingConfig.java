@@ -11,13 +11,13 @@ import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 @Configuration
 @EnableScheduling
 @RequiredArgsConstructor
-public class SchedulingConfig implements SchedulingConfigurer {
+public class SchedulingConfig  {
 
-  private final TelegramClientConfig telegramClientConfig;
-  private final TelegramService service;
-
-  @Override
-  public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-    taskRegistrar.addFixedRateTask(service::getUpdates, Duration.ofMillis(telegramClientConfig.getRefreshRate()));
-  }
+//  private final TelegramClientConfig telegramClientConfig;
+//  private final TelegramService service;
+//
+//  @Override
+//  public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
+//    taskRegistrar.addFixedRateTask(service::getUpdates, Duration.ofMillis(telegramClientConfig.getRefreshRate()));
+//  }
 }

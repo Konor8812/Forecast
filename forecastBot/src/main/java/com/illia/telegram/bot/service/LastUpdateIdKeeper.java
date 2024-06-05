@@ -1,7 +1,9 @@
 package com.illia.telegram.bot.service;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public interface LastUpdateIdKeeper {
-    long getUpdateId();
+    AtomicLong getUpdateId();
 
     void setUpdateId(long lastUpdateId);
 }

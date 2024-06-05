@@ -6,7 +6,8 @@ import com.illia.telegram.bot.model.SendMessageRequest;
 import reactor.core.publisher.Mono;
 
 public interface TelegramClient {
-    Mono<GetUpdatesResponse> getUpdates(GetUpdatesRequest request);
 
-    void sendMessage(SendMessageRequest message);
+  Mono<GetUpdatesResponse> getUpdates(GetUpdatesRequest request);
+
+  void sendMessage(SendMessageRequest message);
 }
