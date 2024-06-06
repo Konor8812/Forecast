@@ -6,5 +6,5 @@ import reactor.core.publisher.Mono;
 
 public interface WeatherForecastRequester {
 
-  Mono<WeatherForecast> requestForecast(String url);
+    Mono<WeatherForecast> requestForecast(String url);
 }

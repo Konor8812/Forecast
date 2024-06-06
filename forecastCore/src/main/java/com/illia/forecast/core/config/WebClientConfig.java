@@ -14,22 +14,22 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebClientConfig {
 
-  @Bean
-  public WebClientCustomizer webClientCustomizer(ObjectMapper objectMapper) {
-    return builder -> {
-      builder.exchangeStrategies(ExchangeStrategies.builder()
-          .codecs(configurer -> {
-            configurer.defaultCodecs().jackson2JsonDecoder(new Jackson2JsonDecoder(objectMapper));
-            configurer.defaultCodecs().jackson2JsonEncoder(new Jackson2JsonEncoder(objectMapper));
-          })
-          .build());
-    };
-  }
+    @Bean
+    public WebClientCustomizer webClientCustomizer(ObjectMapper objectMapper) {
+        return builder -> {
+            builder.exchangeStrategies(ExchangeStrategies.builder()
+                    .codecs(configurer -> {
+                        configurer.defaultCodecs().jackson2JsonDecoder(new Jackson2JsonDecoder(objectMapper));
+                        configurer.defaultCodecs().jackson2JsonEncoder(new Jackson2JsonEncoder(objectMapper));
+                    })
+                    .build());
+        };
+    }
 
-  @Bean
-  public WebClient webClient(@Qualifier("webClientCustomizer") WebClientCustomizer customizer) {
-    WebClient.Builder builder = WebClient.builder();
-    customizer.customize(builder);
-    return builder.build();
-  }
+    @Bean
+    public WebClient webClient(@Qualifier("webClientCustomizer") WebClientCustomizer customizer) {
+        WebClient.Builder builder = WebClient.builder();
+        customizer.customize(builder);
+        return builder.build();
+    }
 }

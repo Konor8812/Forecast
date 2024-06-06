@@ -13,8 +13,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Forecast" target="11" />
-      <module name="forecast" target="11" />
+      <module name="Forecast" target="22" />
+      <module name="forecast" target="22" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

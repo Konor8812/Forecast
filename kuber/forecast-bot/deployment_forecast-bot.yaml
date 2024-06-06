@@ -18,14 +18,14 @@ spec:
         app: forecast-bot
     spec:
       containers:
-        - image: registry.gitlab.com/admirai/forecast/forecast-bot:latest
+        - image: registry.gitlab.com/admirai/diploma_forecast/forecast-bot:latest
           ports:
             - containerPort: 8085
           envFrom:
             - configMapRef:
                 name: weather-forecast-config
             - secretRef:
-                name: forecast-bot-secret
+                name: weather-forecast-secret
           name: forecast-bot
       imagePullSecrets:
         - name: regcred

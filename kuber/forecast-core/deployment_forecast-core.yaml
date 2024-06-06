@@ -18,12 +18,14 @@ spec:
         app: forecast-core
     spec:
       containers:
-        - image: registry.gitlab.com/admirai/forecast/forecast-core:latest
-          name: forecast-core
+        - name: forecast-core
+          image: registry.gitlab.com/admirai/diploma_forecast/forecast-core:latest
           ports:
             - containerPort: 8081
           envFrom:
             - configMapRef:
                 name: weather-forecast-config
+            - secretRef:
+                 name: weather-forecast-secret
       imagePullSecrets:
         - name: regcred

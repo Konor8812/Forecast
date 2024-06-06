@@ -5,3 +5,6 @@ kuber/nginx/useful_utils.txt
 .idea
 
 **/target/**
+
+prepareEnv.sh
+kuber/secret/weather-forecast-secret.yaml

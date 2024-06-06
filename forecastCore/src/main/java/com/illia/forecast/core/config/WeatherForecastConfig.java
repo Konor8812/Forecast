@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 public class WeatherForecastConfig {
 
-  @Value("${weather.baseUrl}")
-  private String baseUrl;
-  @Value("${weather.appid}")
-  private String appid;
-  @Value("${weather.mode}")
-  private String mode;
+    @Value("${weather.baseUrl}")
+    private String baseUrl;
+    @Value("${weather.appid}")
+    private String appid;
+    @Value("${weather.mode}")
+    private String mode;
 }

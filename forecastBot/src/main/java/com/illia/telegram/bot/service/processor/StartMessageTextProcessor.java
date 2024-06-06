@@ -9,17 +9,17 @@ import reactor.core.publisher.Mono;
 public class StartMessageTextProcessor implements MessageTextProcessor {
 
     private final static String START_COMMAND_REPLY = """
-            To get forecast enter either full form: \n
-            `X Y N` - forecast for location, where \n
-            X - decimal, location latitude \n
-            Y - decimal, location longitude \n
-            N - an integer from 1 to 5, numbers of days to show forecast for. \n
-            Example: \n
-            50.5 30.01 2 \n
-            or short form: \n
-            `N` \n
-            Simply an integer from 1 to 5 will return forecast for Irpin', UA for N days. \n
-            Example: \n
+            To get forecast enter either full form:
+            `X Y N` - forecast for location, where
+            X - decimal, location latitude
+            Y - decimal, location longitude
+            N - an integer from 1 to 5, numbers of days to show forecast for.
+            Example:
+            50.5 30.01 2
+            or short form:
+            `N`
+            Simply a positive integer will return forecast for Irpin', UA for N days (max N is 5, min 1). \n
+            Example:
             2
             """;
 

@@ -8,16 +8,13 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 public class OpenAIConfig {
 
-  @Value("${OPENAI_API_KEY}")
-  private String apiKey;
+    @Value("${OPENAI_API_KEY}")
+    private String apiKey;
 
-  @Value("${openai.completions.url}")
-  private String openaiCompletionsUrl;
+    @Value("${openai.completions.url}")
+    private String openaiCompletionsUrl;
 
-  @Value("${openai.max-tokens}")
-  private int maxTokens;
-
-  @Value("${openai.model-name}")
-  private String modelName;
+    @Value("${openai.model-name}")
+    private String modelName;
 
 }

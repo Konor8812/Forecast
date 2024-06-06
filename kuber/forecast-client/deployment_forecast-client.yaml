@@ -18,29 +18,14 @@ spec:
         app: forecast-client
     spec:
       containers:
-        - image: registry.gitlab.com/admirai/forecast/forecast-client:latest
+        - image: registry.gitlab.com/admirai/diploma_forecast/forecast-client:latest
           name: forecast-client
           ports:
             - containerPort: 8082
           envFrom:
             - configMapRef:
                 name: weather-forecast-config
-          readinessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /actuator/health/readiness
-              port: 8092
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 1
-          livenessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8092
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 1
-            initialDelaySeconds: 10
+            - secretRef:
+                name: weather-forecast-secret
       imagePullSecrets:
         - name: regcred

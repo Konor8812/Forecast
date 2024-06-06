@@ -38,18 +38,23 @@
 
     <plugins>
       <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>jib-maven-plugin</artifactId>
         <configuration>
           <from>
-            <image>bellsoft/liberica-openjdk-alpine:latest</image>
+            <image>openjdk:22-jdk</image>
           </from>
           <to>
             <auth>
-              <username>${git.lab.username}</username>
-              <password>${git.lab.password}</password>
+              <username>${env.GITLAB_USERNAME}</username>
+              <password>${env.GITLAB_PASSWORD}</password>
             </auth>
-            <image>registry.gitlab.com/admirai/forecast/forecast-bot</image>
+            <image>registry.gitlab.com/admirai/diploma_forecast/forecast-bot</image>
             <tags>
               <tag>latest</tag>
             </tags>
@@ -62,46 +67,46 @@
             <ports>
               <port>8085</port>
             </ports>
-
           </container>
+          <allowInsecureRegistries>true</allowInsecureRegistries>
         </configuration>
       </plugin>
-      <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib</classpathPrefix>
-              <mainClass>com.illia.ForecastBot</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-shade-plugin</artifactId>
-        <configuration>
-          <filters>
-            <filter>
-              <artifact>*:*</artifact>
-              <excludes>
-                <exclude>module-info.class</exclude>
-                <exclude>META-INF/*.SF</exclude>
-                <exclude>META-INF/*.DSA</exclude>
-                <exclude>META-INF/*.RSA</exclude>
-              </excludes>
-            </filter>
-          </filters>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <artifactId>maven-jar-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--          <archive>-->
+<!--            <manifest>-->
+<!--              <addClasspath>true</addClasspath>-->
+<!--              <classpathPrefix>lib</classpathPrefix>-->
+<!--              <mainClass>com.illia.ForecastBot</mainClass>-->
+<!--            </manifest>-->
+<!--          </archive>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
+<!--      <plugin>-->
+<!--        <artifactId>maven-shade-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--          <filters>-->
+<!--            <filter>-->
+<!--              <artifact>*:*</artifact>-->
+<!--              <excludes>-->
+<!--                <exclude>module-info.class</exclude>-->
+<!--                <exclude>META-INF/*.SF</exclude>-->
+<!--                <exclude>META-INF/*.DSA</exclude>-->
+<!--                <exclude>META-INF/*.RSA</exclude>-->
+<!--              </excludes>-->
+<!--            </filter>-->
+<!--          </filters>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <phase>package</phase>-->
+<!--            <goals>-->
+<!--              <goal>shade</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 </project>

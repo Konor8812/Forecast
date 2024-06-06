@@ -11,9 +11,9 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class OpenAIService {
 
-  private final OpenAIAPICaller apiCaller;
+    private final OpenAIAPICaller apiCaller;
 
-  public Mono<ForecastExplanation> getForecastExplanation(WeatherForecast weatherForecast) {
-    return apiCaller.performAPIRequest(weatherForecast);
-  }
+    public Mono<ForecastExplanation> getForecastExplanation(WeatherForecast weatherForecast) {
+        return apiCaller.performAPIRequest(weatherForecast);
+    }
 }
