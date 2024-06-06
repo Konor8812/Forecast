@@ -1,6 +1,8 @@
 package com.illia.telegram.bot.service.processor.pattern;
 
 
+import lombok.Getter;
+
 import java.util.regex.Pattern;
 
 /**
@@ -12,9 +14,10 @@ import java.util.regex.Pattern;
  * NOD - number of days to output, integer
  */
 
+@Getter
 public enum MessageTextPatterns {
-    FULL(Pattern.compile("((-)?\\d+(\\.\\d+)?) ((-)?\\d+(\\.\\d+)?) (\\d)")),
-    SHORT(Pattern.compile("(\\d)"));
+    FULL_PROMPT_REQUEST_PATTERN(Pattern.compile("((-)?\\d+(\\.\\d+)?) ((-)?\\d+(\\.\\d+)?) (\\d)")),
+    SHORT_PROMPT_REQUEST_PATTERN(Pattern.compile("(\\d)"));
 
     private final Pattern pattern;
 
@@ -22,7 +25,4 @@ public enum MessageTextPatterns {
         this.pattern = pattern;
     }
 
-    public Pattern getPattern() {
-        return pattern;
-    }
 }
