@@ -31,7 +31,6 @@ kubectl apply -f ./kuber/config/weather-forecast-config.yaml
 
 kubectl apply -f ./kuber/secret/weather-forecast-secret.yaml
 
-
 kubectl apply -f ./kuber/forecast-core/deployment_forecast-core.yaml
 kubectl apply -f ./kuber/forecast-core/service_forecast-core.yaml
 

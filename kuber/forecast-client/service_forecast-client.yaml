@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: forecast-client
 spec:
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8082
   selector:
     app: forecast-client
-  type: ClusterIP
+
